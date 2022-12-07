@@ -1,0 +1,54 @@
+{
+	"name": "Event-Blatt 4",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 291434268672645,
+					"parameters": {
+						"object": "AreaSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 837017802784913,
+					"parameters": {
+						"layout": "Area"
+					}
+				}
+			],
+			"sid": 103195512199654
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 640893057866093,
+					"parameters": {
+						"object": "LineSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 997347404445445,
+					"parameters": {
+						"layout": "Main"
+					}
+				}
+			],
+			"sid": 509088211803759
+		}
+	],
+	"sid": 748275859671190
+}

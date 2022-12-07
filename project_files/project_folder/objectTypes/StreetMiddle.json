@@ -1,0 +1,57 @@
+{
+	"name": "StreetMiddle",
+	"plugin-id": "Sprite",
+	"sid": 721143859370720,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1755,
+						"height": 3979,
+						"originX": 0.5,
+						"originY": 0.5697308132875143,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3891848,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.9986754966887417,
+								0,
+								0.9986754966887417,
+								0.5697308132875143,
+								0.9986754966887417,
+								1,
+								0.5,
+								1,
+								0,
+								1,
+								0,
+								0.5697308132875143
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 225034790506638,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

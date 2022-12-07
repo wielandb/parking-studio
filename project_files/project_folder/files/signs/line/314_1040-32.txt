@@ -1,0 +1,3 @@
+parking:condition:SEITE=disc
+parking:condition:SEITE:maxstay=TIME
+traffic_sign:SEITE=DE:314,1040-32

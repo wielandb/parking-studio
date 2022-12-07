@@ -1,0 +1,57 @@
+{
+	"name": "DiscdialogBg",
+	"plugin-id": "Sprite",
+	"sid": 139085079033374,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 700,
+						"height": 700,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7094861,
+						"collisionPoly": {
+							"points": [
+								0.04,
+								0.04,
+								0.5,
+								0.015714285714285715,
+								0.9585714285714285,
+								0.04,
+								0.99,
+								0.5,
+								0.9671428571428572,
+								0.9671428571428572,
+								0.5,
+								0.9971428571428571,
+								0.04,
+								0.9585714285714285,
+								0.017142857142857144,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 393413363266108,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

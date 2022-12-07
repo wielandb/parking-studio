@@ -1,0 +1,3 @@
+parking:condition:SEITE:motorcar=free
+parking:condition:SEITE:vehicle=no_parking
+traffic_sign:SEITE=314,1010-58

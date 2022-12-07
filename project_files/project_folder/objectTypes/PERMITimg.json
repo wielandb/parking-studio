@@ -1,0 +1,57 @@
+{
+	"name": "PERMITimg",
+	"plugin-id": "Sprite",
+	"sid": 235639312221009,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1484,
+						"height": 472,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5174611,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.9993261455525606,
+								0,
+								0.9993261455525606,
+								0.5,
+								0.9993261455525606,
+								0.9978813559322034,
+								0.5,
+								0.9978813559322034,
+								0,
+								0.9978813559322034,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 325158033331704,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

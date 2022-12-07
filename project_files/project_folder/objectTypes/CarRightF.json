@@ -1,0 +1,15 @@
+{
+	"name": "CarRightF",
+	"plugin-id": "SVGPicture",
+	"sid": 918375813962816,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Besteht",
+			"sid": 545617054714989
+		}
+	],
+	"effectTypes": []
+}

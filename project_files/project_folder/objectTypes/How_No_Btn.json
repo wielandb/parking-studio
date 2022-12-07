@@ -1,0 +1,57 @@
+{
+	"name": "How_No_Btn",
+	"plugin-id": "Sprite",
+	"sid": 613361302563257,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 700,
+						"height": 200,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8037246,
+						"collisionPoly": {
+							"points": [
+								0.032857142857142856,
+								0.115,
+								0.5,
+								0.005,
+								0.97,
+								0.1,
+								0.99,
+								0.5,
+								0.9657142857142857,
+								0.88,
+								0.5,
+								0.985,
+								0.03,
+								0.89,
+								0.007142857142857143,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 641017731586107,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

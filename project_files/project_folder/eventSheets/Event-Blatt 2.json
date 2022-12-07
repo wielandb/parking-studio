@@ -1,0 +1,1440 @@
+{
+	"name": "Event-Blatt 2",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "CanvasPan",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": true,
+			"isConstant": false,
+			"sid": 155854114591449
+		},
+		{
+			"eventType": "variable",
+			"name": "EditSignId",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 171407206249905
+		},
+		{
+			"eventType": "variable",
+			"name": "EditSignResult",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 609106147331676
+		},
+		{
+			"eventType": "variable",
+			"name": "OH_inp",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 548515778285753
+		},
+		{
+			"eventType": "variable",
+			"name": "PERMIT_inp",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 601549253611120
+		},
+		{
+			"eventType": "variable",
+			"name": "MAXSTAY_inp",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 433903700560756
+		},
+		{
+			"eventType": "variable",
+			"name": "ObjectType",
+			"type": "string",
+			"initialValue": "line",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 702783865292496
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Camera",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Setup the camera by centering it in the middle of the layout."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 113910083356311
+						}
+					],
+					"actions": [
+						{
+							"id": "scroll-to-position",
+							"objectClass": "System",
+							"sid": 611933294601117,
+							"disabled": true,
+							"parameters": {
+								"x": "LayoutWidth / 2",
+								"y": "LayoutHeight / 2"
+							}
+						},
+						{
+							"callFunction": "HideAddSignList",
+							"sid": 904227267293809
+						},
+						{
+							"id": "add-child",
+							"objectClass": "ParamtersDialogBg",
+							"sid": 419242525118025,
+							"parameters": {
+								"child": "TIMElbl",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": true,
+								"transform-h": true,
+								"transform-a": true,
+								"transform-z-elevation": true,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "ParamtersDialogBg",
+							"sid": 694743968321789,
+							"parameters": {
+								"child": "OPENINGHOURSlbl",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": true,
+								"transform-h": true,
+								"transform-a": true,
+								"transform-z-elevation": true,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "ParamtersDialogBg",
+							"sid": 704359329502603,
+							"parameters": {
+								"child": "PERMITlbl",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": true,
+								"transform-h": true,
+								"transform-a": true,
+								"transform-z-elevation": true,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "ParamtersDialogBg",
+							"sid": 935436464710900,
+							"parameters": {
+								"child": "TIMEexampleImg",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": true,
+								"transform-h": true,
+								"transform-a": true,
+								"transform-z-elevation": true,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "ParamtersDialogBg",
+							"sid": 395972325745802,
+							"parameters": {
+								"child": "unknown_timeframe",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": true,
+								"transform-h": true,
+								"transform-a": true,
+								"transform-z-elevation": true,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "ParamtersDialogBg",
+							"sid": 561908842465719,
+							"parameters": {
+								"child": "PERMITimg",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": true,
+								"transform-h": true,
+								"transform-a": true,
+								"transform-z-elevation": true,
+								"destroy-with-parent": false
+							}
+						},
+						{
+							"callFunction": "HideParametersDialog",
+							"sid": 115530996094719
+						}
+					],
+					"sid": 526675115000037
+				},
+				{
+					"eventType": "comment",
+					"text": "If a touch input is detected and the player is not currently interacting with the HUD, update the last touched position and allow the canvas pan movement."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-nth-touch-start",
+							"objectClass": "Touch",
+							"sid": 825389493553278,
+							"parameters": {
+								"touch-number": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 254904647684894,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 866456315428824,
+									"parameters": {
+										"variable": "LastX",
+										"value": "Touch.X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 946800047144642,
+									"parameters": {
+										"variable": "LastY",
+										"value": "Touch.Y"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 910676645285022,
+									"parameters": {
+										"variable": "CanvasPan",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 294318256498775
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "However, if the touch input is ended, prevent the can pan movement from being used."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-nth-touch-end",
+							"objectClass": "Touch",
+							"sid": 505395682208406,
+							"parameters": {
+								"touch-number": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 830350563377148,
+							"parameters": {
+								"variable": "CanvasPan",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 835461055388122
+				},
+				{
+					"eventType": "comment",
+					"text": "The last touched position."
+				},
+				{
+					"eventType": "variable",
+					"name": "LastX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 831399069096466
+				},
+				{
+					"eventType": "variable",
+					"name": "LastY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 430551274214146
+				},
+				{
+					"eventType": "comment",
+					"text": "The direction the touch has moved to since the last frame."
+				},
+				{
+					"eventType": "variable",
+					"name": "TouchAngle",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 403675933603955
+				},
+				{
+					"eventType": "comment",
+					"text": "The distance between the last and current touch positions."
+				},
+				{
+					"eventType": "variable",
+					"name": "TouchDistance",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 376771741217987
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 634609050546672,
+							"parameters": {
+								"variable": "CanvasPan"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Calculate and store the updated values for the touch angle and touch distance."
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 495344253220400,
+							"parameters": {
+								"variable": "TouchAngle",
+								"value": "angle(LastX, LastY, Touch.X, Touch.Y)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 680346239178481,
+							"parameters": {
+								"variable": "TouchDistance",
+								"value": "distance(LastX, LastY, Touch.X, Touch.Y)"
+							}
+						}
+					],
+					"sid": 470488030115548,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "If the touch distance is greater than zero, pan the camera towards the opposite direction based on the touch angle."
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 146263672091642,
+									"parameters": {
+										"variable": "TouchDistance",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "scroll-to-position",
+									"objectClass": "System",
+									"sid": 643237203065643,
+									"parameters": {
+										"x": "0",
+										"y": "scrolly + sin(TouchAngle + 180) * TouchDistance"
+									}
+								}
+							],
+							"sid": 680679279099886
+						},
+						{
+							"eventType": "comment",
+							"text": "Update the last position one more time."
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 535902874679980,
+									"parameters": {
+										"variable": "LastX",
+										"value": "Touch.X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 872961897340181,
+									"parameters": {
+										"variable": "LastY",
+										"value": "Touch.Y"
+									}
+								}
+							],
+							"sid": 813234793944246
+						}
+					]
+				}
+			],
+			"sid": 386588097149443
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 260495919221569,
+					"parameters": {
+						"object": "AddSign"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 455319947298852,
+					"parameters": {
+						"variable": "EditSignId",
+						"value": "AddSign.orderID"
+					}
+				}
+			],
+			"sid": 752438335905794,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "ParamtersDialogBg",
+							"sid": 986197521180070,
+							"isInverted": true
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "SelectableParkingSign",
+							"sid": 578533957073399,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ShowAddSignList",
+							"sid": 867309687198784
+						}
+					],
+					"sid": 375106773687138
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 846201702301855,
+					"parameters": {
+						"object": "ParkingSign"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 395948273845772,
+					"disabled": true,
+					"parameters": {
+						"variable": "EditSignId",
+						"value": "AddSign.orderID"
+					}
+				}
+			],
+			"sid": 754839096040542,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "ParamtersDialogBg",
+							"sid": 459313527145186,
+							"isInverted": true
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "SelectableAddSign",
+							"sid": 662842515305403,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ShowMainSignList",
+							"sid": 864384617890735
+						}
+					],
+					"sid": 276672721124574
+				}
+			]
+		},
+		{
+			"functionName": "ShowAddSignList",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "SelectableAddSign",
+					"sid": 664821971799049,
+					"parameters": {
+						"x": "800"
+					}
+				}
+			],
+			"sid": 563357483411515
+		},
+		{
+			"functionName": "HideAddSignList",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "SelectableAddSign",
+					"sid": 575087506302376,
+					"parameters": {
+						"x": "-800"
+					}
+				}
+			],
+			"sid": 337893843264207
+		},
+		{
+			"functionName": "ShowMainSignList",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "SelectableParkingSign",
+					"sid": 292570088658465,
+					"parameters": {
+						"x": "800"
+					}
+				}
+			],
+			"sid": 646715366250022
+		},
+		{
+			"functionName": "HideMainSignList",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "SelectableParkingSign",
+					"sid": 441071524064151,
+					"parameters": {
+						"x": "-800"
+					}
+				}
+			],
+			"sid": 905541892260054
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 766076534457360,
+					"parameters": {
+						"object": "SelectableAddSign"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 328242379000565,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "AddSign",
+							"sid": 628621617798446,
+							"parameters": {
+								"instance-variable": "orderID",
+								"comparison": 0,
+								"value": "EditSignId"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "HideAddSignList",
+							"sid": 568485669872348
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "AddSign",
+							"sid": 113315321290383,
+							"parameters": {
+								"animation": "SelectableAddSign.AnimationName",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 724640705863098
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SelectableAddSign",
+							"sid": 331723526236505,
+							"parameters": {
+								"instance-variable": "NEEDSTIME",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "runtime.globalVars.MAXSTAY_inp = prompt(\"Diese Zeichen enthalten eine (maximale) Zeitangabe.\\nWelche Maximalzeit steht auf diesem Schild?\\nGib es bitte in folgender Form an: 30 minutes, 1 hour, 2 hours... \", \"2 hours\");"
+						}
+					],
+					"sid": 225353571254353
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SelectableAddSign",
+							"sid": 291477160501179,
+							"parameters": {
+								"instance-variable": "NEEDSPERMIT",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "runtime.globalVars.PERMIT_inp = prompt(\"Hier braucht man einen bestimmten Parkausweis. Welchen?\", \"\");"
+						}
+					],
+					"sid": 782018503203067
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SelectableAddSign",
+							"sid": 601757877068204,
+							"parameters": {
+								"instance-variable": "NEEDSOH",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "runtime.globalVars.OH_inp = prompt(\"Bitte gib den auf dem Zeichen angegebenen Zeitraum im OSM opening_hours-Syntax an.\", \"Mo-Fr 08:00-16:00\");"
+						}
+					],
+					"sid": 308138660650411
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 409770500295806,
+					"parameters": {
+						"object": "SelectableParkingSign"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "HideMainSignList",
+					"sid": 863977525358497
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "ParkingSign",
+					"sid": 304522466697798,
+					"parameters": {
+						"animation": "SelectableParkingSign.AnimationName",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 548769297625849
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-mouse-wheel",
+					"objectClass": "Maus",
+					"sid": 747514050081405,
+					"parameters": {
+						"direction": "down"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "scroll-to-position",
+					"objectClass": "System",
+					"sid": 511567046849647,
+					"parameters": {
+						"x": "0",
+						"y": "scrolly + 180"
+					}
+				}
+			],
+			"sid": 430529334507675
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-mouse-wheel",
+					"objectClass": "Maus",
+					"sid": 643073505801625,
+					"parameters": {
+						"direction": "up"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "scroll-to-position",
+					"objectClass": "System",
+					"sid": 501634287118067,
+					"parameters": {
+						"x": "0",
+						"y": "scrolly - 180"
+					}
+				}
+			],
+			"sid": 141351724523398
+		},
+		{
+			"functionName": "BuildSignString",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "string",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 204489877281229,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "tmpStr",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 611001678569047
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 411511218894527,
+							"parameters": {
+								"variable": "tmpStr",
+								"value": "ParkingSign.AnimationName"
+							}
+						}
+					],
+					"sid": 473862986582251
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "AddSign",
+							"sid": 861791321669693,
+							"parameters": {
+								"instance-variable": "orderID",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "AddSign",
+							"sid": 506696615389195,
+							"parameters": {
+								"animation": "\"no_sign\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 970956636518003,
+							"parameters": {
+								"variable": "tmpStr",
+								"value": "tmpStr & \"_\" & AddSign.AnimationName"
+							}
+						}
+					],
+					"sid": 398309753374243
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "AddSign",
+							"sid": 930266010039706,
+							"parameters": {
+								"instance-variable": "orderID",
+								"comparison": 0,
+								"value": "2"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "AddSign",
+							"sid": 395720852002373,
+							"parameters": {
+								"animation": "\"no_sign\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 980656493797612,
+							"parameters": {
+								"variable": "tmpStr",
+								"value": "tmpStr & \"_\" & AddSign.AnimationName"
+							}
+						}
+					],
+					"sid": 118904835859044
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "AddSign",
+							"sid": 615784354971754,
+							"parameters": {
+								"instance-variable": "orderID",
+								"comparison": 0,
+								"value": "3"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "AddSign",
+							"sid": 968570604963881,
+							"parameters": {
+								"animation": "\"no_sign\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 595655626562356,
+							"parameters": {
+								"variable": "tmpStr",
+								"value": "tmpStr & \"_\" & AddSign.AnimationName"
+							}
+						}
+					],
+					"sid": 515412768476792
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "AddSign",
+							"sid": 586592429743317,
+							"parameters": {
+								"instance-variable": "orderID",
+								"comparison": 0,
+								"value": "4"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "AddSign",
+							"sid": 952714374023694,
+							"parameters": {
+								"animation": "\"no_sign\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 892363272015902,
+							"parameters": {
+								"variable": "tmpStr",
+								"value": "tmpStr & \"_\" & AddSign.AnimationName"
+							}
+						}
+					],
+					"sid": 220619238846467
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 920409209213919,
+							"parameters": {
+								"value": "tmpStr"
+							}
+						}
+					],
+					"sid": 472846521250533
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 603982409827454
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text2",
+					"sid": 717997027798580,
+					"parameters": {
+						"text": "Functions.BuildSignString"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "OPENINGHOURS_input",
+					"sid": 707305020063267,
+					"parameters": {
+						"object": "ParamtersDialogBg",
+						"image-point-optional": "2"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "TIME_input",
+					"sid": 265210850446545,
+					"parameters": {
+						"object": "ParamtersDialogBg",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "PERMITinput",
+					"sid": 550949973726349,
+					"parameters": {
+						"object": "ParamtersDialogBg",
+						"image-point-optional": "3"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "placeHoldersConfirmBtn",
+					"sid": 642442296250534,
+					"parameters": {
+						"object": "ParamtersDialogBg",
+						"image-point-optional": "4"
+					}
+				}
+			],
+			"sid": 483147239549889,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-key",
+							"objectClass": "JSON",
+							"sid": 782228882387913,
+							"parameters": {
+								"path": "Functions.BuildSignString"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "Text2",
+							"sid": 526683983143830,
+							"parameters": {
+								"color": "rgbEx(0, 255, 0)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 954022840058402,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Button",
+							"sid": 752599779589688,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 855619000307446
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 449062606236789
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "Text2",
+							"sid": 435948045686627,
+							"parameters": {
+								"color": "rgbEx(255, 0, 0)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 301640398043466,
+							"parameters": {
+								"text": "\"Schilderkombination unbekannt! Kann nicht verwenden. :(\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Button",
+							"sid": 384494253515999,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 306177595754680
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 413437862903044
+				}
+			],
+			"actions": [
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Browser",
+					"sid": 262000800109331,
+					"parameters": {
+						"mode": "stretch-scale-outer",
+						"navigation-ui": "auto"
+					}
+				}
+			],
+			"sid": 658564577968276,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Button",
+					"sid": 244404511771192
+				}
+			],
+			"actions": [
+				{
+					"id": "set-item",
+					"objectClass": "LokalerSpeicher",
+					"sid": 290593216416808,
+					"parameters": {
+						"key": "\"EditSignResult\"",
+						"value": "Functions.BuildSignString"
+					}
+				},
+				{
+					"callFunction": "HideAddSignList",
+					"sid": 350801508523693
+				},
+				{
+					"callFunction": "HideMainSignList",
+					"sid": 930045058849012
+				},
+				{
+					"callFunction": "HideParametersDialog",
+					"sid": 204211495207474
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 618076580256769,
+					"parameters": {
+						"variable": "EditSignResult",
+						"value": "Functions.BuildSignString"
+					}
+				}
+			],
+			"sid": 241778972652658,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 286030370175005,
+							"parameters": {
+								"variable": "ObjectType",
+								"comparison": 0,
+								"value": "\"line\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 103499361477766,
+							"parameters": {
+								"layout": "Main"
+							}
+						}
+					],
+					"sid": 495864917734159
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 580531516036748,
+							"parameters": {
+								"variable": "ObjectType",
+								"comparison": 0,
+								"value": "\"area\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 311859517203071,
+							"parameters": {
+								"layout": "Area"
+							}
+						}
+					],
+					"sid": 583072751452430
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 810266974360064
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "HideMainSignList",
+					"sid": 352606000379461
+				},
+				{
+					"callFunction": "HideAddSignList",
+					"sid": 838170752880012
+				},
+				{
+					"callFunction": "HideParametersDialog",
+					"sid": 360682225380264,
+					"disabled": true
+				}
+			],
+			"sid": 276358745021317
+		},
+		{
+			"functionName": "ShowParametersDialog",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "ParamtersDialogBg",
+					"sid": 897688647412969,
+					"parameters": {
+						"x": "548"
+					}
+				}
+			],
+			"sid": 761594683866377
+		},
+		{
+			"functionName": "HideParametersDialog",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "ParamtersDialogBg",
+					"sid": 170019152250681,
+					"parameters": {
+						"x": "-913"
+					}
+				}
+			],
+			"sid": 138386437426760
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "placeHoldersConfirmBtn",
+					"sid": 805629181158083
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "HideParametersDialog",
+					"sid": 926099191164077
+				}
+			],
+			"sid": 698054424828246
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-text-changed",
+					"objectClass": "OPENINGHOURS_input",
+					"sid": 464359002725338
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 571112220980165,
+					"parameters": {
+						"variable": "OH_inp",
+						"value": "OPENINGHOURS_input.Text"
+					}
+				}
+			],
+			"sid": 990350371336058
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-text-changed",
+					"objectClass": "TIME_input",
+					"sid": 417487147213227
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 553837082618429,
+					"parameters": {
+						"variable": "MAXSTAY_inp",
+						"value": "TIME_input.Text"
+					}
+				}
+			],
+			"sid": 617685832360600
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-text-changed",
+					"objectClass": "PERMITinput",
+					"sid": 365301945014801
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 703680818626128,
+					"parameters": {
+						"variable": "PERMIT_inp",
+						"value": "PERMITinput.Text"
+					}
+				}
+			],
+			"sid": 814862772709513
+		}
+	],
+	"sid": 374032709421836
+}

@@ -1,0 +1,3 @@
+parking:condition:SEITE:motorcycle=free
+parking:condition:SEITE:vehicle=no_parking
+traffic_sign:SEITE=DE:314,1010-62

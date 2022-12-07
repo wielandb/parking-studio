@@ -1,0 +1,3 @@
+parking:condition:SEITE=no_parking
+parking:condition:SEITE:conditional=free @ residents
+traffic_sign:SEITE=DE:286,1020-32

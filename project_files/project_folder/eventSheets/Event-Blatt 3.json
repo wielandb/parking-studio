@@ -1,0 +1,2841 @@
+{
+	"name": "Event-Blatt 3",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "SETANGLETO2",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 243866856032965
+		},
+		{
+			"eventType": "variable",
+			"name": "SETHOWTO2",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 341259733472098
+		},
+		{
+			"eventType": "variable",
+			"name": "EDITSIDE2",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 408892966758812
+		},
+		{
+			"eventType": "variable",
+			"name": "SignEditSide2",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 198286542742466
+		},
+		{
+			"eventType": "variable",
+			"name": "ParkingSignTagsRight2",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 923159296170376
+		},
+		{
+			"eventType": "variable",
+			"name": "ParkingSignTagsLeft2",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 534256876743692
+		},
+		{
+			"eventType": "variable",
+			"name": "RightTIME2",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 458920861863619
+		},
+		{
+			"eventType": "variable",
+			"name": "RightOPENINGHOURS2",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 804437482926352
+		},
+		{
+			"eventType": "variable",
+			"name": "RightPERMIT2",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 901657191091559
+		},
+		{
+			"eventType": "variable",
+			"name": "LeftTIME2",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 953986724427494
+		},
+		{
+			"eventType": "variable",
+			"name": "LeftOPENINGHOURS2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 521535558020018
+		},
+		{
+			"eventType": "variable",
+			"name": "LeftPERMIT2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 993527182123255
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 674476922886737,
+					"parameters": {
+						"object": "StreetSide"
+					}
+				},
+				{
+					"id": "is-on-screen",
+					"objectClass": "TypeDialogBg",
+					"sid": 218585940314003,
+					"isInverted": true
+				},
+				{
+					"id": "is-on-screen",
+					"objectClass": "AngleDialogBg",
+					"sid": 543904644671423,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "StreetSide",
+					"sid": 311407202622821,
+					"disabled": true,
+					"parameters": {
+						"animation": "choose(\"bay_perpendicular\", \"bay_parrallel\", \"painted_perpendicular\",\"bay_diagonal\", \"nextto_parrallel\")",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 849826460735138,
+					"parameters": {
+						"text": "find(StreetSide.AnimationName, \"perpendicular\") & \" \" & StreetSide.AnimationName"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "TypeDialogBg",
+					"sid": 177575279833910,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "700",
+						"time": "0.5",
+						"ease": "easeoutelastic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 720446764812593,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 909980898403522,
+							"parameters": {
+								"first-value": "StreetSide.Angle",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 341322383971597,
+							"parameters": {
+								"variable": "EDITSIDE",
+								"value": "\"right\""
+							}
+						}
+					],
+					"sid": 428877394253599
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 724154603288703,
+							"parameters": {
+								"first-value": "StreetSide.Angle",
+								"comparison": 0,
+								"second-value": "180"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 974929381441592,
+							"parameters": {
+								"variable": "EDITSIDE",
+								"value": "\"left\""
+							}
+						}
+					],
+					"sid": 479407153099255
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 851029560534078
+				}
+			],
+			"actions": [
+				{
+					"id": "add-child",
+					"objectClass": "TypeDialogBg",
+					"sid": 991463680274487,
+					"parameters": {
+						"child": "BayTrigger",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-z-elevation": true,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "TypeDialogBg",
+					"sid": 981143117846186,
+					"parameters": {
+						"child": "halfTrigger",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-z-elevation": true,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "TypeDialogBg",
+					"sid": 671294756836942,
+					"parameters": {
+						"child": "markedTrigger",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-z-elevation": true,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "TypeDialogBg",
+					"sid": 875177392188188,
+					"parameters": {
+						"child": "onStreetTrigger",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-z-elevation": true,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "TypeDialogBg",
+					"sid": 849443327827823,
+					"parameters": {
+						"child": "nextToTrigger",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-z-elevation": true,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "AngleDialogBg",
+					"sid": 252100011954077,
+					"parameters": {
+						"child": "parrallelTrigger",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-z-elevation": true,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "AngleDialogBg",
+					"sid": 459254939942970,
+					"parameters": {
+						"child": "perpendicularTrigger",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-z-elevation": true,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "AngleDialogBg",
+					"sid": 510986242933652,
+					"parameters": {
+						"child": "diagonalTrigger",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-z-elevation": true,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "TypeDialogBg",
+					"sid": 268776771366949,
+					"parameters": {
+						"child": "How_No_Btn",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-z-elevation": true,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "request-url",
+					"objectClass": "AJAX",
+					"sid": 151536358927071,
+					"parameters": {
+						"tag": "\"dd\"",
+						"url": "\"https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/export/txt/parking_new_area.json\""
+					}
+				},
+				{
+					"callFunction": "UpdateStreetPuzzle",
+					"sid": 514028541798091
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 242258070872903,
+					"parameters": {
+						"variable": "ObjectType",
+						"value": "\"area\""
+					}
+				}
+			],
+			"sid": 513091339527879,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 441873144830824,
+							"parameters": {
+								"variable": "EditSignResult",
+								"comparison": 1,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 406333509810872,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 356299817296882,
+									"parameters": {
+										"variable": "SignEditSide",
+										"comparison": 0,
+										"value": "\"right\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 261097789679423,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SignRight",
+											"sid": 667515038308128,
+											"parameters": {
+												"instance-variable": "side",
+												"comparison": 0,
+												"value": "\"right\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "load-image-from-url",
+											"objectClass": "SignRight",
+											"sid": 148853829734601,
+											"parameters": {
+												"uri": "\"https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/\" & EditSignResult &  \".png\"",
+												"size": "resize-to-image-size",
+												"cross-origin": "anonymous"
+											}
+										},
+										{
+											"id": "wait-for-signal",
+											"objectClass": "System",
+											"sid": 972164718063644,
+											"parameters": {
+												"tag": "\"JSONloaded\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 979076340076546,
+											"parameters": {
+												"variable": "ParkingSignTagsRight",
+												"value": "replace(JSON.Get(EditSignResult), \"SEITE\", \"right\")"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 693997810059922,
+											"parameters": {
+												"variable": "ParkingSignTagsRight",
+												"value": "replace(ParkingSignTagsRight, \"LINEBREAK\", newline)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 288297188139196,
+											"parameters": {
+												"variable": "ParkingSignTagsRight",
+												"value": "replace(ParkingSignTagsRight, newline & newline, newline)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 266606955019803,
+											"parameters": {
+												"variable": "ParkingSignTagsRight",
+												"value": "replace(ParkingSignTagsRight, \"TIME\", MAXSTAY_inp)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 849962168296057,
+											"parameters": {
+												"variable": "ParkingSignTagsRight",
+												"value": "replace(ParkingSignTagsRight, \"OPENINGHOURS\", OH_inp)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 124912021569235,
+											"parameters": {
+												"variable": "ParkingSignTagsRight",
+												"value": "replace(ParkingSignTagsRight, \"AUSWEIS\", PERMIT_inp)"
+											}
+										}
+									],
+									"sid": 734426440349025
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 379822061039084,
+									"parameters": {
+										"variable": "SignEditSide",
+										"comparison": 0,
+										"value": "\"left\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 534797252326742,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "SignRight",
+											"sid": 755900215167515,
+											"parameters": {
+												"instance-variable": "side",
+												"comparison": 0,
+												"value": "\"left\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "load-image-from-url",
+											"objectClass": "SignRight",
+											"sid": 560417805812709,
+											"parameters": {
+												"uri": "\"https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/\" & EditSignResult &  \".png\"",
+												"size": "resize-to-image-size",
+												"cross-origin": "anonymous"
+											}
+										},
+										{
+											"id": "wait-for-signal",
+											"objectClass": "System",
+											"sid": 543754781865416,
+											"parameters": {
+												"tag": "\"JSONloaded\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 394510768756587,
+											"parameters": {
+												"variable": "ParkingSignTagsLeft",
+												"value": "replace(JSON.Get(EditSignResult), \"SEITE\", \"left\")"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 875331377338067,
+											"parameters": {
+												"variable": "ParkingSignTagsLeft",
+												"value": "replace(ParkingSignTagsLeft, \"LINEBREAK\", newline)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 361584145739990,
+											"parameters": {
+												"variable": "ParkingSignTagsLeft",
+												"value": "replace(ParkingSignTagsLeft, newline & newline, newline)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 350731625261494,
+											"parameters": {
+												"variable": "ParkingSignTagsLeft",
+												"value": "replace(ParkingSignTagsLeft, \"TIME\", MAXSTAY_inp)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 959115031061902,
+											"parameters": {
+												"variable": "ParkingSignTagsLeft",
+												"value": "replace(ParkingSignTagsLeft, \"OPENINGHOURS\", OH_inp)"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 701619546671678,
+											"parameters": {
+												"variable": "ParkingSignTagsLeft",
+												"value": "replace(ParkingSignTagsLeft, \"AUSWEIS\", PERMIT_inp)"
+											}
+										}
+									],
+									"sid": 180620342250439
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 888713974746740,
+					"parameters": {
+						"tag": "\"dd\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "parse",
+					"objectClass": "JSON",
+					"sid": 272781818656909,
+					"parameters": {
+						"data": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TextEingabe",
+					"sid": 448882302710828,
+					"parameters": {
+						"text": "TextEingabe.Text & newline & \"LEEEEEEEL\""
+					}
+				},
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 566495956615922,
+					"parameters": {
+						"tag": "\"JSONloaded\""
+					}
+				}
+			],
+			"sid": 495445139033716,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-key",
+							"objectClass": "JSON",
+							"sid": 446435301072808,
+							"parameters": {
+								"path": "EditSignResult"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 889894182864523,
+							"disabled": true,
+							"parameters": {
+								"variable": "EditSignResult",
+								"value": "\"\""
+							}
+						}
+					],
+					"sid": 726787130942963
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-image-url-loaded",
+					"objectClass": "SignRight",
+					"sid": 297849645643029
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "SignRight",
+					"sid": 126609673753142,
+					"parameters": {
+						"width": "200",
+						"height": "SignRight.Height * (200 / SignRight.Width)"
+					}
+				}
+			],
+			"sid": 901689228417197
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 876567760437030
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "TypeDialogBg",
+					"sid": 570921411272394,
+					"parameters": {
+						"animation": "\"no_selected\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TextEingabe",
+					"sid": 438313092241491,
+					"parameters": {
+						"text": "replace(Functions.StreetPuzzleToTags, newline &  newline, newline)"
+					}
+				}
+			],
+			"sid": 934764820696079
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Maus",
+					"sid": 721139766445591,
+					"parameters": {
+						"object": "BayTrigger"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "TypeDialogBg",
+					"sid": 928167038522876,
+					"parameters": {
+						"animation": "\"bay\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 822156095827081
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Maus",
+					"sid": 659907156435947,
+					"parameters": {
+						"object": "halfTrigger"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "TypeDialogBg",
+					"sid": 968113100336478,
+					"parameters": {
+						"animation": "\"half\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 669932960075631
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Maus",
+					"sid": 388343333383101,
+					"parameters": {
+						"object": "markedTrigger"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "TypeDialogBg",
+					"sid": 855002396515371,
+					"parameters": {
+						"animation": "\"marked\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 149313965718369
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Maus",
+					"sid": 378728498187866,
+					"parameters": {
+						"object": "nextToTrigger"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "TypeDialogBg",
+					"sid": 469666363007868,
+					"parameters": {
+						"animation": "\"nextto\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 618316962203510
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Maus",
+					"sid": 380382939677377,
+					"parameters": {
+						"object": "onStreetTrigger"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "TypeDialogBg",
+					"sid": 815992968480193,
+					"parameters": {
+						"animation": "\"on\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 516963688191513
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 842465683131256,
+					"parameters": {
+						"object": "BayTrigger"
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "TypeDialogBg",
+					"sid": 667314128037215,
+					"behaviorType": "Tween",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "TypeDialogBg",
+					"sid": 573027401928156,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "3000",
+						"time": "1",
+						"ease": "easeoutcubic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"callFunction": "ShowAngleDialog",
+					"sid": 435986832401418
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 481747529832194,
+					"parameters": {
+						"variable": "SETHOWTO",
+						"value": "\"bay\""
+					}
+				}
+			],
+			"sid": 281881369754357
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 415698084244645,
+					"parameters": {
+						"object": "markedTrigger"
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "TypeDialogBg",
+					"sid": 610371264603153,
+					"behaviorType": "Tween",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "TypeDialogBg",
+					"sid": 909063159296200,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "3000",
+						"time": "1",
+						"ease": "easeoutcubic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"callFunction": "ShowAngleDialog",
+					"sid": 517436638101319
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 924066240229049,
+					"parameters": {
+						"variable": "SETHOWTO",
+						"value": "\"painted\""
+					}
+				}
+			],
+			"sid": 825382580318791
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 849756121840238,
+					"parameters": {
+						"object": "onStreetTrigger"
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "TypeDialogBg",
+					"sid": 111755950137135,
+					"behaviorType": "Tween",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "TypeDialogBg",
+					"sid": 725012720331392,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "3000",
+						"time": "1",
+						"ease": "easeoutcubic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"callFunction": "ShowAngleDialog",
+					"sid": 355169656355956
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 158703328476774,
+					"parameters": {
+						"variable": "SETHOWTO",
+						"value": "\"on\""
+					}
+				}
+			],
+			"sid": 503875325343668
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 939366393093902,
+					"parameters": {
+						"object": "halfTrigger"
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "TypeDialogBg",
+					"sid": 947410906237148,
+					"behaviorType": "Tween",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "TypeDialogBg",
+					"sid": 196294725208219,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "3000",
+						"time": "1",
+						"ease": "easeoutcubic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"callFunction": "ShowAngleDialog",
+					"sid": 145050596997054
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 344774701808528,
+					"parameters": {
+						"variable": "SETHOWTO",
+						"value": "\"half\""
+					}
+				}
+			],
+			"sid": 471166408094364
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 290860424515396,
+					"parameters": {
+						"object": "nextToTrigger"
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "TypeDialogBg",
+					"sid": 626782177566181,
+					"behaviorType": "Tween",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "TypeDialogBg",
+					"sid": 476446323009382,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "3000",
+						"time": "1",
+						"ease": "easeoutcubic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"callFunction": "ShowAngleDialog",
+					"sid": 728428897031961
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 935083829935964,
+					"parameters": {
+						"variable": "SETHOWTO",
+						"value": "\"nextto\""
+					}
+				}
+			],
+			"sid": 202923311742061
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 206570941427970,
+					"parameters": {
+						"object": "How_No_Btn"
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "TypeDialogBg",
+					"sid": 720404516846651,
+					"behaviorType": "Tween",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "TypeDialogBg",
+					"sid": 849426055159475,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "3000",
+						"time": "1",
+						"ease": "easeoutcubic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 283732744390525,
+					"parameters": {
+						"variable": "SETHOWTO",
+						"value": "\"no\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 197751708936736,
+					"parameters": {
+						"variable": "SETANGLETO",
+						"value": "\"no\""
+					}
+				},
+				{
+					"callFunction": "UpdateStreetPuzzle",
+					"sid": 860897985258123
+				}
+			],
+			"sid": 985636864778250
+		},
+		{
+			"functionName": "ShowAngleDialog2",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "AngleDialogBg",
+					"sid": 424069679995523,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "700",
+						"time": "0.5",
+						"ease": "easeoutelastic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 890540648547053
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 456069134183751
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "AngleDialogBg",
+					"sid": 718234284583809,
+					"parameters": {
+						"animation": "\"none_selected\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 674329215847061
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Maus",
+					"sid": 708202254252647,
+					"parameters": {
+						"object": "diagonalTrigger"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "AngleDialogBg",
+					"sid": 134668601680422,
+					"parameters": {
+						"animation": "\"diagonal\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 267195821950454
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Maus",
+					"sid": 745724294575173,
+					"parameters": {
+						"object": "parrallelTrigger"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "AngleDialogBg",
+					"sid": 305535428290295,
+					"parameters": {
+						"animation": "\"parrallel\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 834960583821967
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Maus",
+					"sid": 134664794433117,
+					"parameters": {
+						"object": "perpendicularTrigger"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "AngleDialogBg",
+					"sid": 177776274067348,
+					"parameters": {
+						"animation": "\"perpendicular\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 501110782834526
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 536532259416048,
+					"parameters": {
+						"object": "diagonalTrigger"
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "AngleDialogBg",
+					"sid": 591004323409390,
+					"behaviorType": "Tween",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "AngleDialogBg",
+					"sid": 409412405173781,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "3000",
+						"time": "1",
+						"ease": "easeoutcubic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 219830163305875,
+					"parameters": {
+						"variable": "SETANGLETO",
+						"value": "\"diagonal\""
+					}
+				},
+				{
+					"callFunction": "UpdateStreetPuzzle",
+					"sid": 121015910951332
+				}
+			],
+			"sid": 952308688522825
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 338798793145719,
+					"parameters": {
+						"object": "parrallelTrigger"
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "AngleDialogBg",
+					"sid": 314159507000006,
+					"behaviorType": "Tween",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "AngleDialogBg",
+					"sid": 774440432276814,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "3000",
+						"time": "1",
+						"ease": "easeoutcubic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 790231386384096,
+					"parameters": {
+						"variable": "SETANGLETO",
+						"value": "\"parrallel\""
+					}
+				},
+				{
+					"callFunction": "UpdateStreetPuzzle",
+					"sid": 787767169549850
+				}
+			],
+			"sid": 138937914548492
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 637006232058097,
+					"parameters": {
+						"object": "perpendicularTrigger"
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "AngleDialogBg",
+					"sid": 964313373886359,
+					"behaviorType": "Tween",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "AngleDialogBg",
+					"sid": 478542045886001,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "3000",
+						"time": "1",
+						"ease": "easeoutcubic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 535585515887631,
+					"parameters": {
+						"variable": "SETANGLETO",
+						"value": "\"perpendicular\""
+					}
+				},
+				{
+					"callFunction": "UpdateStreetPuzzle",
+					"sid": 279266236753409
+				}
+			],
+			"sid": 107460671776445
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 232129178234152
+				}
+			],
+			"actions": [
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Browser",
+					"sid": 874378034011017,
+					"parameters": {
+						"mode": "stretch-scale-outer",
+						"navigation-ui": "auto"
+					}
+				}
+			],
+			"sid": 905976803932233,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 238679964671050,
+					"parameters": {
+						"object": "SignRight"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 796247584334949,
+					"parameters": {
+						"variable": "SignEditSide",
+						"value": "SignRight.side"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 794447725397560,
+					"parameters": {
+						"layout": "SignPuzzle"
+					}
+				}
+			],
+			"sid": 442375466148549
+		},
+		{
+			"functionName": "StreetPuzzleToTags2",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "string",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 727739623092142,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "rightSignStr",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 658936798698495
+				},
+				{
+					"eventType": "variable",
+					"name": "leftSignStr",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 908132986598355
+				},
+				{
+					"eventType": "variable",
+					"name": "leftStr",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 162441661470593
+				},
+				{
+					"eventType": "variable",
+					"name": "rightStr",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 314324770797069
+				},
+				{
+					"eventType": "variable",
+					"name": "tmpStr",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 134240736468115
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 313447123859466,
+							"parameters": {
+								"animation": "\"bay_diagonal\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 583821182024234,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 728718249338600,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=diagonal\" & newline & \"parking:lane:right:diagonal=street_side\""
+							}
+						}
+					],
+					"sid": 539410228212961
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 444996865639068,
+							"parameters": {
+								"animation": "\"bay_parrallel\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 278025349066757,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 660823439533827,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=parallel\" & newline & \"parking:lane:right:parallel=street_side\""
+							}
+						}
+					],
+					"sid": 708128662224481
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 383293352248923,
+							"parameters": {
+								"animation": "\"bay_perpendicular\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 740589091947653,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 767503124025736,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=perpendicular\" & newline & \"parking:lane:right:perpendicular=street_side\""
+							}
+						}
+					],
+					"sid": 925376083620672
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 623145523126275,
+							"parameters": {
+								"animation": "\"half_diagonal\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 698984206018523,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 592391278219601,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=diagonal\" & newline & \"parking:lane:right:diagonal=half_on_kerb\""
+							}
+						}
+					],
+					"sid": 329981006899555
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 845978395459750,
+							"parameters": {
+								"animation": "\"half_parrallel\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 823968546201045,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 663577469520055,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=parallel\" & newline & \"parking:lane:right:parallel=half_on_kerb\""
+							}
+						}
+					],
+					"sid": 966692780750112
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 371773479206786,
+							"parameters": {
+								"animation": "\"half_perpendicular\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 730496396961336,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 853609341342741,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=perpendicular\" & newline & \"parking:lane:right:perpendicular=half_on_kerb\""
+							}
+						}
+					],
+					"sid": 620021689465116
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 448026407545753,
+							"parameters": {
+								"animation": "\"nextto_diagonal\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 967969147320741,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 431972590891005,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=diagonal\" & newline & \"parking:lane:right:diagonal=on_kerb\""
+							}
+						}
+					],
+					"sid": 264305684410945
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 685175268242896,
+							"parameters": {
+								"animation": "\"nextto_parrallel\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 411598915141083,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 832722360884230,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=parallel\" & newline & \"parking:lane:right:parallel=on_kerb\""
+							}
+						}
+					],
+					"sid": 191175799571564
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 574386156791161,
+							"parameters": {
+								"animation": "\"nextto_perpendicular\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 374678778732747,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 846057951441006,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=perpendicular\" & newline & \"parking:lane:right:perpendicular=on_kerb\""
+							}
+						}
+					],
+					"sid": 473587468805205
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 402566893543615,
+							"parameters": {
+								"animation": "\"no\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 817191262851312,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 155925936123122,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=no\""
+							}
+						}
+					],
+					"sid": 697886125153523
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 885633593452272,
+							"parameters": {
+								"animation": "\"on_diagonal\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 990077257799802,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 585432378886644,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=diagonal\" & newline & \"parking:lane:right:diagonal=on_street\""
+							}
+						}
+					],
+					"sid": 978538868855353
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 862168344146730,
+							"parameters": {
+								"animation": "\"on_parrallel\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 950630827810990,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 511968251861104,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=parallel\" & newline & \"parking:lane:right:parallel=on_street\""
+							}
+						}
+					],
+					"sid": 946357705243815
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 122916449710662,
+							"parameters": {
+								"animation": "\"on_perpendicular\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 159323764733835,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 864512400753451,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=perpendicular\" & newline & \"parking:lane:right:perpendicular=on_street\""
+							}
+						}
+					],
+					"sid": 600631857301880
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 119070563514046,
+							"parameters": {
+								"animation": "\"painted_diagonal\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 584371846599822,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 399477965191309,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=diagonal\" & newline & \"parking:lane:right:diagonal=painted_area_only\""
+							}
+						}
+					],
+					"sid": 957583789621438
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 189502056632901,
+							"parameters": {
+								"animation": "\"painted_parrallel\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 816112660061316,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 334373367579360,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=parallel\" & newline & \"parking:lane:right:parallel=painted_area_only\""
+							}
+						}
+					],
+					"sid": 309667096665984
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 722860850184579,
+							"parameters": {
+								"animation": "\"painted_perpendicular\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 472221639761991,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 886333222755990,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:lane:right=perpendicular\" & newline & \"parking:lane:right:perpendicular=painted_area_only\""
+							}
+						}
+					],
+					"sid": 603011921328158
+				},
+				{
+					"eventType": "comment",
+					"text": "Ab hier kommen die linken Dinge"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 272700481497339,
+							"parameters": {
+								"animation": "\"bay_diagonal\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 765306845901958,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 493837055326101,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=diagonal\" & newline & \"parking:lane:left:diagonal=street_side\""
+							}
+						}
+					],
+					"sid": 336100644589340
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 707958562792406,
+							"parameters": {
+								"animation": "\"bay_parrallel\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 983416162260735,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 761054551581381,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=parallel\" & newline & \"parking:lane:left:parallel=street_side\""
+							}
+						}
+					],
+					"sid": 100679403460599
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 653580054360840,
+							"parameters": {
+								"animation": "\"bay_perpendicular\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 469196499423535,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 512166842116945,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=perpendicular\" & newline & \"parking:lane:left:perpendicular=street_side\""
+							}
+						}
+					],
+					"sid": 631397637226443
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 724866925869395,
+							"parameters": {
+								"animation": "\"half_diagonal\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 264194437032236,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 820906403943486,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=diagonal\" & newline & \"parking:lane:left:diagonal=half_on_kerb\""
+							}
+						}
+					],
+					"sid": 201169162172876
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 859677080738348,
+							"parameters": {
+								"animation": "\"half_parrallel\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 564548444144945,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 724809184752350,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=parallel\" & newline & \"parking:lane:left:parallel=half_on_kerb\""
+							}
+						}
+					],
+					"sid": 509506341294008
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 965842595902885,
+							"parameters": {
+								"animation": "\"half_perpendicular\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 840303888658414,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 922632640489857,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=perpendicular\" & newline & \"parking:lane:left:perpendicular=half_on_kerb\""
+							}
+						}
+					],
+					"sid": 180490440939878
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 149239859923615,
+							"parameters": {
+								"animation": "\"nextto_diagonal\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 232789114069340,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 681202842744558,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=diagonal\" & newline & \"parking:lane:left:diagonal=on_kerb\""
+							}
+						}
+					],
+					"sid": 975729437637842
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 100954300254050,
+							"parameters": {
+								"animation": "\"nextto_parrallel\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 607288997164289,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 955099863610864,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=parallel\" & newline & \"parking:lane:left:parallel=on_kerb\""
+							}
+						}
+					],
+					"sid": 860973418624902
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 290446396968874,
+							"parameters": {
+								"animation": "\"nextto_perpendicular\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 216974599785749,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 921999368458356,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=perpendicular\" & newline & \"parking:lane:left:perpendicular=on_kerb\""
+							}
+						}
+					],
+					"sid": 921464215987319
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 990872968862063,
+							"parameters": {
+								"animation": "\"no\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 873615086793858,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 672653042249596,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=no\""
+							}
+						}
+					],
+					"sid": 747222886012041
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 886228608853401,
+							"parameters": {
+								"animation": "\"on_diagonal\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 375866900126535,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 836342999973110,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=diagonal\" & newline & \"parking:lane:left:diagonal=on_street\""
+							}
+						}
+					],
+					"sid": 640725024677116
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 382795405389215,
+							"parameters": {
+								"animation": "\"on_parrallel\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 917463842247456,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 613993271800224,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=parallel\" & newline & \"parking:lane:left:parallel=on_street\""
+							}
+						}
+					],
+					"sid": 310294644213158
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 451289365477671,
+							"parameters": {
+								"animation": "\"on_perpendicular\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 690054673801931,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 469194629692404,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=perpendicular\" & newline & \"parking:lane:left:perpendicular=on_street\""
+							}
+						}
+					],
+					"sid": 279571176252681
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 610232484176494,
+							"parameters": {
+								"animation": "\"painted_diagonal\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 968233422479339,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 909237369974265,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=diagonal\" & newline & \"parking:lane:left:diagonal=painted_area_only\""
+							}
+						}
+					],
+					"sid": 133162567492930
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 142149597157635,
+							"parameters": {
+								"animation": "\"painted_parrallel\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 747379826380485,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 302056735260146,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=parallel\" & newline & \"parking:lane:left:parallel=painted_area_only\""
+							}
+						}
+					],
+					"sid": 606024315394411
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 995271634744105,
+							"parameters": {
+								"animation": "\"painted_perpendicular\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 370270797292411,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 920796171793464,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:lane:left=perpendicular\" & newline & \"parking:lane:left:perpendicular=painted_area_only\""
+							}
+						}
+					],
+					"sid": 311880346499120
+				},
+				{
+					"eventType": "comment",
+					"text": "Schilder für Rechts"
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 223084544518778,
+							"parameters": {
+								"value": "rightStr & newline & leftStr & rightSignStr & newline & leftSignStr & newline & ParkingSignTagsRight & newline & ParkingSignTagsLeft"
+							}
+						}
+					],
+					"sid": 273822108931744
+				}
+			]
+		},
+		{
+			"functionName": "ParkingVorlageReplace2",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "string",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "inputText",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 291342972568334
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 108481823977236,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "tmpStr",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 553899592409516
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 714728758694067,
+							"parameters": {
+								"variable": "tmpStr",
+								"value": "inputText"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 425724572990746,
+							"parameters": {
+								"variable": "tmpStr",
+								"value": "replace(tmpStr,\"LINEBREAK\", newline)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 633173538135226,
+							"parameters": {
+								"variable": "tmpStr",
+								"value": "replace(tmpStr, \"SEITE\", SignEditSide)"
+							}
+						},
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 451954950242999,
+							"parameters": {
+								"value": "tmpStr"
+							}
+						}
+					],
+					"sid": 768789706035848
+				}
+			]
+		}
+	],
+	"sid": 671438514069843
+}

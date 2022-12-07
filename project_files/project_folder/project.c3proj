@@ -1,0 +1,541 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 31702,
+	"name": "ParkingStudio",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TextBox",
+			"name": "Text Eingabe",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "SVGPicture",
+			"name": "SVG-Bild",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Maus",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Lokaler Speicher",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Json",
+			"name": "JSON",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "HTMLElement",
+			"name": "HTML Element",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Persist",
+			"name": "Besteht",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sinus",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		}
+	],
+	"uniqueId": "f4ingr4nh7k",
+	"objectTypes": {
+		"items": [
+			"StreetSide",
+			"StreetMiddle",
+			"Fog",
+			"SignRight",
+			"SignLeft",
+			"ImportURLBox",
+			"ImportBtn",
+			"CarRightA",
+			"CarRightB",
+			"CarLeftC",
+			"CarRightD",
+			"CarRightF",
+			"CarRightE",
+			"Maus",
+			"CarLeftA",
+			"CarLeftB",
+			"CarRightC",
+			"CarLeftD",
+			"Text",
+			"TextEingabe",
+			"ParkingSign",
+			"AddSign1",
+			"Touch",
+			"SelectableAddSign",
+			"AddSign2",
+			"AddSign3",
+			"AddSign4",
+			"AddSign",
+			"Text2",
+			"TypeDialogBg",
+			"AngleDialogBg",
+			"BayTrigger",
+			"markedTrigger",
+			"onStreetTrigger",
+			"halfTrigger",
+			"nextToTrigger",
+			"parrallelTrigger",
+			"diagonalTrigger",
+			"perpendicularTrigger",
+			"Browser",
+			"Button",
+			"Sprite",
+			"How_No_Btn",
+			"SelectableParkingSign",
+			"LokalerSpeicher",
+			"AJAX",
+			"JSON",
+			"Button2",
+			"ParamtersDialogBg",
+			"TIMEinput",
+			"TIME_input",
+			"TIMElbl",
+			"TIMEexampleImg",
+			"OPENINGHOURS_input",
+			"OPENINGHOURSlbl",
+			"unknown_timeframe",
+			"PERMITinput",
+			"PERMITlbl",
+			"PERMITimg",
+			"placeHoldersConfirmBtn",
+			"fineprint",
+			"fineHTML",
+			"LineSelector",
+			"AreaSelector",
+			"Title",
+			"Pole",
+			"HintergrundArea",
+			"DiscdialogBg",
+			"Parkscheibe",
+			"Logo",
+			"DeleteSignsBtn",
+			"DeleteParkingIcon",
+			"RedoAll",
+			"BackBtn",
+			"Button3",
+			"Debug",
+			"Button4"
+		],
+		"subfolders": []
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Main",
+			"SignPuzzle",
+			"Area",
+			"Choose",
+			"Settings"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"Event-Blatt 1",
+			"Event-Blatt 2",
+			"Event-Blatt 3",
+			"Event-Blatt 4",
+			"Event-Blatt 5"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "Lade-Logo.png",
+					"type": "image/png",
+					"sid": 747082963125880,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				},
+				{
+					"name": "Symbol-16.png",
+					"type": "image/png",
+					"sid": 294416692880139,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Symbol-128.png",
+					"type": "image/png",
+					"sid": 901788712297366,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Symbol-32.png",
+					"type": "image/png",
+					"sid": 921052880765803,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Symbol-64.png",
+					"type": "image/png",
+					"sid": 555250966109533,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Symbol-256.png",
+					"type": "image/png",
+					"sid": 809732783387203,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Symbol-512.png",
+					"type": "image/png",
+					"sid": 367959905342902,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "car4.svg",
+					"type": "image/svg+xml",
+					"sid": 879199920079871,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "car5.svg",
+					"type": "image/svg+xml",
+					"sid": 805084919319783,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "car1.svg",
+					"type": "image/svg+xml",
+					"sid": 822831216714570,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "car2.svg",
+					"type": "image/svg+xml",
+					"sid": 265776324335869,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "car3.svg",
+					"type": "image/svg+xml",
+					"sid": 568031538298515,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Datei.json",
+					"type": "application/json",
+					"sid": 128854458758542,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "lines.json",
+					"type": "application/json",
+					"sid": 906276600688460,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "area.json",
+					"type": "application/json",
+					"sid": 610191446976952,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": [
+				{
+					"items": [],
+					"subfolders": [
+						{
+							"items": [
+								{
+									"name": "314_1040-32.txt",
+									"type": "text/plain",
+									"sid": 426841164979050,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "286_1010-62.txt",
+									"type": "text/plain",
+									"sid": 392574817638122,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "286_1010-51.txt",
+									"type": "text/plain",
+									"sid": 321391456226359,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "286_1020-32.txt",
+									"type": "text/plain",
+									"sid": 239336960914012,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "286_1042-33.txt",
+									"type": "text/plain",
+									"sid": 477016899831871,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "314_1010-51.txt",
+									"type": "text/plain",
+									"sid": 418291384321526,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "314_1010-58.txt",
+									"type": "text/plain",
+									"sid": 851483897317022,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "314_1010-57_1042-33.txt",
+									"type": "text/plain",
+									"sid": 383245213897942,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "314_1010-62.txt",
+									"type": "text/plain",
+									"sid": 901129874248861,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "line"
+						}
+					],
+					"name": "signs"
+				}
+			]
+		}
+	},
+	"timelines": {
+		"items": [
+			"Zeitlinie 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "",
+		"version": "1.1.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "portrait",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "progress-logo",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "flat"
+	},
+	"viewportWidth": 1080,
+	"viewportHeight": 1920,
+	"firstLayout": "Choose"
+}
