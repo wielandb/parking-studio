@@ -7,7 +7,7 @@
 
 ParkingStudio hilft, straßenseitges Parken in OpenStreetMap zu erfassen. Man kann die Art und die Orientierung des Parkens, sowie die Beschilderung mit einem einfachen UI zusammenklicken und anschließend die entsprechenden OSM-Tags bequem aus einer Textbox herauskopieren. 
 
-## [Online Version](https://haukauntrie.de/online/parkingstudio)
+## [Auf GitHub Pages ausprobieren](https://wielandb.github.io/parking-studio/export/html5/)
 
 
 
