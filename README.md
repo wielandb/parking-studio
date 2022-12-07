@@ -9,7 +9,15 @@ ParkingStudio hilft, straßenseitges Parken in OpenStreetMap zu erfassen. Man ka
 
 ## [Auf GitHub Pages ausprobieren](https://wielandb.github.io/parking-studio/export/html5/)
 
+## Features
 
+
+
+
+
+## Tagging-Definitionen
+
+Die Tags, die die App für die verschiedenen Schilder setzt, kommen aus einem seperaten Repository: [wielandb/osm-parking-tagging](https://github.com/wielandb/osm-parking-tagging). So können das Tagging und die Webapp seperat gepflegt werden. Es bietet außerdem Personen mit besseren Fähigkeiten in UI/UX-Design die möglichkeit, eigne Apps/Websites/Plugins zu schreiben. 
 
 
 
@@ -19,6 +27,6 @@ ParkingStudio hilft, straßenseitges Parken in OpenStreetMap zu erfassen. Man ka
 - `export/` Enthält Exports des Tools
   - `export/html5` Enthält einen HTML5-Export des Tools
 - `project_files`
-  - `project_files/project_folder`
+  - `project_files/project_folder` Enthält das Construct3-Projekt als Projektordner
   - `project_files/single_file` Enthält die c3p-Projektdatei als einzelne Datei
 - `showcase/` enthält die Bilder, die in dieser Readme gezeigt werden
