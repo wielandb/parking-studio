@@ -11,7 +11,7 @@
 
 - `assets/`
 - `export/` Enthält Exports des Tools
-  - `export/html5`
+  - `export/html5` Enthält einen HTML5-Export des Tools
 - `project_files`
   - `project_files/project_folder`
   - `project_files/single_file` Enthält die c3p-Projektdatei als einzelne Datei
