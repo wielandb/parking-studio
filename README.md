@@ -1,7 +1,7 @@
 # ParkingStudio
  Eine Webapp, die beim Taggen von Straßenparken in OpenStreetMap hilft.
 
-![parking_studio_showcase](showcase\parking_studio_showcase.png)
+![parking_studio_showcase](showcase/parking_studio_showcase.png)
 
 
 
