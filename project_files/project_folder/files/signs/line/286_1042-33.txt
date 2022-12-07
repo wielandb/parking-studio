@@ -1,4 +1,0 @@
-parking:condition:SEITE:conditional=no_parking @ (OPENING_HOURS)
-parking:lane:SEITE:conditional=no @ (OPENING_HOURS)
-parking:condition:SEITE=free
-traffic_sign:SEITE=DE:286,1042-33

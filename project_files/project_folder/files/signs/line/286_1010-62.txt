@@ -1,2 +1,0 @@
-parking:condition:SEITE:motorcycle=no_parking
-traffic_sign:SEITE=DE:286,1010-62

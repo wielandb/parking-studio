@@ -1,7 +1,0 @@
-parking:condition:SEITE:vehicle=yes
-parking:condition:SEITE:vehicle:conditional=no_parking @ (OPENING_HOURS)
-parking:condition:SEITE:bus=yes
-parking:condition:SEITE:bus:conditional=designated @ (OPENING_HOURS)
-parking:condition:SEITE:tourist_bus=yes
-parking:condition:SEITE:tourist_bus:conditional=designated @ (OPENING_HOURS)
-traffic_sign:SEITE=DE:314,1010-57,1042-33

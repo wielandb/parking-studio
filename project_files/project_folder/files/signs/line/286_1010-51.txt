@@ -1,2 +1,0 @@
-parking:condition:SEITE:hgv=no_parking
-traffic_sign:SEITE=DE:186,1010-51
