@@ -307,39 +307,6 @@
 					"type": "SelectableAddSign",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "1053-30",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 40,
-					"instanceVariables": {
-						"NEEDSTIME": 0,
-						"NEEDSOH": 0,
-						"NEEDSPERMIT": 0
-					},
-					"behaviors": {},
-					"world": {
-						"x": -800,
-						"y": 3252,
-						"width": 413.5479920131491,
-						"height": 227.45139560723197,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SelectableAddSign",
-					"properties": {
-						"initially-visible": true,
 						"initial-animation": "1053-31",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -354,7 +321,7 @@
 					"behaviors": {},
 					"world": {
 						"x": -800,
-						"y": 3538,
+						"y": 3235,
 						"width": 413.5479920131491,
 						"height": 227.45139560723197,
 						"originX": 0.5,
@@ -459,7 +426,7 @@
 				{
 					"type": "SelectableParkingSign",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "290",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -488,7 +455,7 @@
 				{
 					"type": "SelectableParkingSign",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "315-55",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -517,7 +484,7 @@
 				{
 					"type": "SelectableParkingSign",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "315-65",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -546,7 +513,7 @@
 				{
 					"type": "SelectableParkingSign",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "315-75",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -575,7 +542,7 @@
 				{
 					"type": "SelectableParkingSign",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "315-85",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -652,7 +619,7 @@
 					"behaviors": {},
 					"world": {
 						"x": -798,
-						"y": 3813,
+						"y": 3510,
 						"width": 413.5479920131491,
 						"height": 227.45139560723197,
 						"originX": 0.5,
@@ -685,7 +652,7 @@
 					"behaviors": {},
 					"world": {
 						"x": -796,
-						"y": 4102,
+						"y": 3799,
 						"width": 413.5479920131491,
 						"height": 227.45139560723197,
 						"originX": 0.5,
@@ -718,7 +685,7 @@
 					"behaviors": {},
 					"world": {
 						"x": -793.5565362904441,
-						"y": 4395.082597782167,
+						"y": 4092.082597782167,
 						"width": 406.7619179856796,
 						"height": 305.07143848925966,
 						"originX": 0.5,
@@ -1570,6 +1537,39 @@
 							1,
 							1
 						]
+					}
+				},
+				{
+					"type": "SelectableAddSign",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "1053-30",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 40,
+					"instanceVariables": {
+						"NEEDSTIME": 0,
+						"NEEDSOH": 0,
+						"NEEDSPERMIT": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": -2594,
+						"y": 3119,
+						"width": 413.5479920131491,
+						"height": 227.45139560723197,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],
