@@ -107,6 +107,27 @@
 							"sid": 904227267293809
 						},
 						{
+							"callFunction": "HideParametersDialog",
+							"sid": 596168403223636
+						},
+						{
+							"callFunction": "HideAddSignList",
+							"sid": 590344724813615
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 468763745972116,
+							"parameters": {
+								"variable": "EditSignId",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "HideAddSignList",
+							"sid": 243943245626915
+						},
+						{
 							"id": "add-child",
 							"objectClass": "ParamtersDialogBg",
 							"sid": 419242525118025,
@@ -207,6 +228,10 @@
 						{
 							"callFunction": "HideParametersDialog",
 							"sid": 115530996094719
+						},
+						{
+							"callFunction": "HideAddSignList",
+							"sid": 439822875547719
 						},
 						{
 							"id": "set-eventvar-value",
