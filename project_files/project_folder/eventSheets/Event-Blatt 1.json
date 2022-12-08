@@ -5167,9 +5167,9 @@
 						{
 							"id": "set-function-return-value",
 							"objectClass": "Functions",
-							"sid": 495425046244954,
+							"sid": 900475082377204,
 							"parameters": {
-								"value": "Functions.ReplaceRightLeftBoth(rightStr & newline & leftStr & rightSignStr & newline & leftSignStr & newline & ParkingSignTagsRight & newline & ParkingSignTagsLeft, newline, \"right\", \"left\", \"both\")"
+								"value": "rightStr & newline & leftStr & rightSignStr & newline & leftSignStr & newline & ParkingSignTagsRight & newline & ParkingSignTagsLeft"
 							}
 						}
 					],
@@ -5459,6 +5459,7 @@
 					"id": "set-text",
 					"objectClass": "TextEingabe",
 					"sid": 821003405455910,
+					"disabled": true,
 					"parameters": {
 						"text": "Functions.ReplaceRightLeftBoth(TextEingabe.Text, newline, \"right\", \"left\", \"both\")"
 					}
