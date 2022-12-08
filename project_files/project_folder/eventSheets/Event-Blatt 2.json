@@ -197,8 +197,29 @@
 							}
 						},
 						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 175736671596312,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
 							"callFunction": "HideParametersDialog",
 							"sid": 115530996094719
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 715213802649405,
+							"parameters": {
+								"variable": "EditSignId",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "HideAddSignList",
+							"sid": 712665352871934
 						}
 					],
 					"sid": 526675115000037

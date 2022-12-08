@@ -4541,6 +4541,7 @@ self.C3_ExpressionFuncs = [
 			return () => f0(n1.ExpObject(), "\n", "right", "left", "both");
 		},
 		() => "Camera",
+		() => 0.05,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			const v1 = p._GetNode(1).GetVar();
