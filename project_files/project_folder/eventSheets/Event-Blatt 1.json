@@ -5167,9 +5167,9 @@
 						{
 							"id": "set-function-return-value",
 							"objectClass": "Functions",
-							"sid": 900475082377204,
+							"sid": 179215099106598,
 							"parameters": {
-								"value": "rightStr & newline & leftStr & rightSignStr & newline & leftSignStr & newline & ParkingSignTagsRight & newline & ParkingSignTagsLeft"
+								"value": "rightStr & newline & leftStr & rightSignStr & newline & leftSignStr & newline & Functions.ReplaceRightLeftBoth(ParkingSignTagsRight & newline & ParkingSignTagsLeft, newline, \"right\", \"left\", \"both\")"
 							}
 						}
 					],
@@ -5440,7 +5440,7 @@
 			"actions": [
 				{
 					"type": "script",
-					"script": "    var strings = localVars.inpText.split(localVars.backConnect);\n\tvar a = localVars.a;\n\tvar b = localVars.b;\n\tvar c = localVars.c;\n\t\n\t\n\t// go through all the strings\n    for (var i = 0; i < strings.length; i++) {\n        var string = strings[i];\n        // if the string contains a, check if there is a string that contains b and is the same if a and b are removed\n        if (string.indexOf(a) != -1) {\n            var found = false;\n            for (var j = 0; j < strings.length; j++) {\n                if (j != i) {\n                    var string2 = strings[j];\n                    if (string2.indexOf(b) != -1) {\n                        var string3 = string.replace(a, \"\");\n                        var string4 = string2.replace(b, \"\");\n                        if (string3 == string4) {\n                            found = true;\n                            break;\n                        }\n                    }\n                }\n            }\n            if (found) {\n                // if there is, replace a with c\n                string = string.replace(a, c);\n                // and delete the string that contains b\n                strings.splice(j, 1);\n                // put the string back in the list (replace the string that contained b)\n                strings[j] = string;\n            }\n        }\n        \n    }\n    // put strings back into one string, connected with newlines\n    var result = \"\";\n    for (var i = 0; i < strings.length; i++) {\n        result += strings[i] + localVars.backConnect;\n    }\n    \n\n    runtime.setReturnValue(result);"
+					"script": "    var strings = localVars.inpText.split(localVars.backConnect);\n\tconsole.log(localVars.inpText);\n\tvar a = localVars.a;\n\tvar b = localVars.b;\n\tvar c = localVars.c;\n\tvar newResult = [];\n\tvar doNotAdd = [];\n\t\n\t\n\t// go through all the strings\n    for (var i = 0; i < strings.length; i++) {\n        var string = strings[i];\n\t\tvar addLater = true;\n        // if the string contains a, check if there is a string that contains b and is the same if a and b are removed\n        if (string.indexOf(a) != -1) {\n            var found = false;\n            for (var j = 0; j < strings.length; j++) {\n                if (j != i) {\n                    var string2 = strings[j];\n\t\t\t\t\tconsole.log(\"Checking \" + string + \" and \" + string2);\n                    if (string2.indexOf(b) != -1) {\n                        var string3 = string.replace(a, \"\");\n                        var string4 = string2.replace(b, \"\");\n                        if (string3 == string4) {\n                            found = true;\n                            break;\n                        }\n                    }\n                }\n            }\n            if (found) {\n\t\t\tconsole.log(string);\n\t\t\tconsole.log(strings);\n\t\t\tconsole.log(i);\n\t\t\tconsole.log(j);\n                // if there is, replace a with c\n                string = string.replace(a, c);\n                // and delete the string that contains b\n                // strings.splice(j, 1);\n                // put the string back in the list (replace the string that contained b)\n                //strings[j] = string;\n\t\t\t\tconsole.log(\"Adding (changed) str \" + string);\n\t\t\t\tnewResult.push(string);\n\t\t\t\tdoNotAdd.push(strings[j]);\n\t\t\t\tdoNotAdd.push(string);\n\t\t\t\t\n            } else {\n\t\t\t\tconsole.log(\"Adding str \" + string);\n\t\t\t\tnewResult.push(string);\n\t\t\t\taddLater = false;\n\t\t\t}\n        }\n\t\t\n\t\tif (addLater) {\n\t\t\tif (!doNotAdd.includes(string)) {\n\t\t\t\tnewResult.push(string);\n\t\t\t\t}\n\t\t}\n        \n    }\n    // put strings back into one string, connected with newlines\n    var result = \"\";\n    for (var i = 0; i < newResult.length; i++) {\n        result += newResult[i] + localVars.backConnect;\n    }\n\t\n    console.log(newResult);\n\tconsole.log(result);\n\n    runtime.setReturnValue(result);"
 				}
 			],
 			"sid": 957244597198257
@@ -5459,7 +5459,6 @@
 					"id": "set-text",
 					"objectClass": "TextEingabe",
 					"sid": 821003405455910,
-					"disabled": true,
 					"parameters": {
 						"text": "Functions.ReplaceRightLeftBoth(TextEingabe.Text, newline, \"right\", \"left\", \"both\")"
 					}

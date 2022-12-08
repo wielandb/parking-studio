@@ -6,20 +6,25 @@ const scriptsInEvents = {
 	async ["Event-Blatt1_Event141_Act1"](runtime, localVars)
 	{
 		    var strings = localVars.inpText.split(localVars.backConnect);
+			console.log(localVars.inpText);
 			var a = localVars.a;
 			var b = localVars.b;
 			var c = localVars.c;
+			var newResult = [];
+			var doNotAdd = [];
 			
 			
 			// go through all the strings
 		    for (var i = 0; i < strings.length; i++) {
 		        var string = strings[i];
+				var addLater = true;
 		        // if the string contains a, check if there is a string that contains b and is the same if a and b are removed
 		        if (string.indexOf(a) != -1) {
 		            var found = false;
 		            for (var j = 0; j < strings.length; j++) {
 		                if (j != i) {
 		                    var string2 = strings[j];
+							console.log("Checking " + string + " and " + string2);
 		                    if (string2.indexOf(b) != -1) {
 		                        var string3 = string.replace(a, "");
 		                        var string4 = string2.replace(b, "");
@@ -31,22 +36,43 @@ const scriptsInEvents = {
 		                }
 		            }
 		            if (found) {
+					console.log(string);
+					console.log(strings);
+					console.log(i);
+					console.log(j);
 		                // if there is, replace a with c
 		                string = string.replace(a, c);
 		                // and delete the string that contains b
-		                strings.splice(j, 1);
+		                // strings.splice(j, 1);
 		                // put the string back in the list (replace the string that contained b)
-		                strings[j] = string;
-		            }
+		                //strings[j] = string;
+						console.log("Adding (changed) str " + string);
+						newResult.push(string);
+						doNotAdd.push(strings[j]);
+						doNotAdd.push(string);
+						
+		            } else {
+						console.log("Adding str " + string);
+						newResult.push(string);
+						addLater = false;
+					}
 		        }
+				
+				if (addLater) {
+					if (!doNotAdd.includes(string)) {
+						newResult.push(string);
+						}
+				}
 		        
 		    }
 		    // put strings back into one string, connected with newlines
 		    var result = "";
-		    for (var i = 0; i < strings.length; i++) {
-		        result += strings[i] + localVars.backConnect;
+		    for (var i = 0; i < newResult.length; i++) {
+		        result += newResult[i] + localVars.backConnect;
 		    }
-		    
+			
+		    console.log(newResult);
+			console.log(result);
 		
 		    runtime.setReturnValue(result);
 	},
