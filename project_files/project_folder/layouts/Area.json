@@ -902,6 +902,64 @@
 							1
 						]
 					}
+				},
+				{
+					"type": "RedoAll",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 87,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 265,
+						"y": 89,
+						"width": 174.53356973237635,
+						"height": 174.53356973237635,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "BackBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 131,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 90,
+						"y": 88,
+						"width": 174.97142623868618,
+						"height": 174.97142623868618,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 941702035864906,
