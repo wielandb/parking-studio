@@ -387,10 +387,10 @@
 				{
 					"id": "request-url",
 					"objectClass": "AJAX",
-					"sid": 151536358927071,
+					"sid": 252468959444158,
 					"parameters": {
 						"tag": "\"dd\"",
-						"url": "\"https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/export/txt/parking_new_area.json\""
+						"url": "\"https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/export/txt/parking_area.json\""
 					}
 				},
 				{

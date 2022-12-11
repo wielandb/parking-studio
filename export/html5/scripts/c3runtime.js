@@ -4315,7 +4315,7 @@ self.C3_ExpressionFuncs = [
 		() => 50,
 		() => 1,
 		() => "dd",
-		() => "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/export/txt/parking_new_way.json",
+		() => "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/export/txt/parking_way.json",
 		() => "line",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -4585,7 +4585,7 @@ self.C3_ExpressionFuncs = [
 		() => "area",
 		() => 548,
 		() => -913,
-		() => "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/export/txt/parking_new_area.json",
+		() => "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/export/txt/parking_area.json",
 		() => "parking:lane:right=diagonal\nparking:lane:right:diagonal=street_side",
 		() => "parking:lane:right=parallel\nparking:lane:right:parallel=street_side",
 		() => "parking:lane:right=perpendicular\nparking:lane:right:perpendicular=street_side",
