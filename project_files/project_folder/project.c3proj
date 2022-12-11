@@ -359,30 +359,6 @@
 					"file-info": {
 						"purpose": "none"
 					}
-				},
-				{
-					"name": "Datei.json",
-					"type": "application/json",
-					"sid": 128854458758542,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "lines.json",
-					"type": "application/json",
-					"sid": 906276600688460,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "area.json",
-					"type": "application/json",
-					"sid": 610191446976952,
-					"file-info": {
-						"purpose": "none"
-					}
 				}
 			],
 			"subfolders": []
