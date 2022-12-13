@@ -321,49 +321,55 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [
+			"items": [],
+			"subfolders": [
 				{
-					"name": "car4.svg",
-					"type": "image/svg+xml",
-					"sid": 879199920079871,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "car5.svg",
-					"type": "image/svg+xml",
-					"sid": 805084919319783,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "car1.svg",
-					"type": "image/svg+xml",
-					"sid": 822831216714570,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "car2.svg",
-					"type": "image/svg+xml",
-					"sid": 265776324335869,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "car3.svg",
-					"type": "image/svg+xml",
-					"sid": 568031538298515,
-					"file-info": {
-						"purpose": "none"
-					}
+					"items": [
+						{
+							"name": "car1.svg",
+							"type": "image/svg+xml",
+							"sid": 822831216714570,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "car2.svg",
+							"type": "image/svg+xml",
+							"sid": 265776324335869,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "car3.svg",
+							"type": "image/svg+xml",
+							"sid": 568031538298515,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "car4.svg",
+							"type": "image/svg+xml",
+							"sid": 879199920079871,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "car5.svg",
+							"type": "image/svg+xml",
+							"sid": 805084919319783,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "svg"
 				}
-			],
-			"subfolders": []
+			]
 		}
 	},
 	"timelines": {
@@ -379,7 +385,7 @@
 	},
 	"properties": {
 		"description": "A webapp to help with tagging street parking in OSM",
-		"version": "1.1.0.2",
+		"version": "1.1.0.4",
 		"author": "wielandb",
 		"authorEmail": "",
 		"authorWebsite": "",

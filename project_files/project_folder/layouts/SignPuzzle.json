@@ -426,7 +426,7 @@
 				{
 					"type": "SelectableParkingSign",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "290",
 						"initial-frame": 0,
 						"enable-collisions": true,
