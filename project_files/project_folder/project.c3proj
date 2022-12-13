@@ -379,7 +379,7 @@
 	},
 	"properties": {
 		"description": "A webapp to help with tagging street parking in OSM",
-		"version": "1.1.0.1",
+		"version": "1.1.0.2",
 		"author": "wielandb",
 		"authorEmail": "",
 		"authorWebsite": "",
