@@ -1600,6 +1600,53 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Maus",
+					"sid": 762921601965367,
+					"parameters": {
+						"object": "How_No_Btn"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "How_No_Btn",
+					"sid": 356754976302759,
+					"parameters": {
+						"animation": "\"Hover\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 662192975826952
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 402039583896699
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "How_No_Btn",
+					"sid": 715211886231434,
+					"parameters": {
+						"animation": "\"Normal\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 666961567960975
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-tap",
 					"objectClass": "Touch",
 					"sid": 658416286989211

@@ -4026,6 +4026,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Mouse.Cnds.IsOverObject,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Behaviors.Tween.Cnds.IsAnyPlaying,
+		C3.Plugins.System.Cnds.Else,
 		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.SVGPicture.Acts.SetImageByName,
 		C3.Plugins.System.Exps.choose,
@@ -4036,9 +4037,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.ResetGlobals,
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.System.Acts.Wait,
-		C3.ScriptsInEvents["Event-Blatt1_Event141_Act1"],
-		C3.Plugins.Button.Cnds.OnClicked,
 		C3.ScriptsInEvents["Event-Blatt1_Event143_Act1"],
+		C3.Plugins.Button.Cnds.OnClicked,
+		C3.ScriptsInEvents["Event-Blatt1_Event145_Act1"],
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.Touch.Cnds.OnNthTouchStart,
 		C3.Plugins.Touch.Exps.X,
@@ -4057,7 +4058,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Button.Acts.SetPosToObject,
 		C3.Plugins.Text.Acts.SetFontColor,
 		C3.Plugins.Button.Acts.SetVisible,
-		C3.Plugins.System.Cnds.Else,
 		C3.Plugins.LocalStorage.Acts.SetItem,
 		C3.Plugins.TextBox.Cnds.OnTextChanged,
 		C3.Plugins.System.Exps.projectversion,
@@ -4412,6 +4412,8 @@ self.C3_ExpressionFuncs = [
 		() => "diagonal",
 		() => "parrallel",
 		() => "perpendicular",
+		() => "Hover",
+		() => "Normal",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpInstVar();
