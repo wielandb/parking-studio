@@ -11,7 +11,7 @@ ParkingStudio hilft, straßenseitges Parken in OpenStreetMap zu erfassen. Man ka
 
 ## Features
 
-- Unterstützt das neue StreetParking-Schema
+- Unterstützt das [neue StreetParking-Schema](https://wiki.openstreetmap.org/wiki/DE:Street_parking)
 - Es kann auch _nur_ das physische Parken oder _nur_ die Beschilderung angegeben werden
 - Hauptfokus liegt auf dem Taggen des Straßenparkens an Ways, es gibt aber auch einen Modus um Beschilderungen für Parkplatz-Areas/Nodes zu taggen
 
