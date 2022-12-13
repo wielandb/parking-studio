@@ -4038,6 +4038,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.Wait,
 		C3.ScriptsInEvents["Event-Blatt1_Event141_Act1"],
 		C3.Plugins.Button.Cnds.OnClicked,
+		C3.ScriptsInEvents["Event-Blatt1_Event143_Act1"],
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.Touch.Cnds.OnNthTouchStart,
 		C3.Plugins.Touch.Exps.X,
@@ -4058,7 +4059,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Button.Acts.SetVisible,
 		C3.Plugins.System.Cnds.Else,
 		C3.Plugins.LocalStorage.Acts.SetItem,
-		C3.Plugins.TextBox.Cnds.OnTextChanged
+		C3.Plugins.TextBox.Cnds.OnTextChanged,
+		C3.Plugins.System.Exps.projectversion,
+		C3.Plugins.Browser.Acts.GoToURLWindow
 	];
 };
 self.C3_JsPropNameTable = [
@@ -4147,6 +4150,8 @@ self.C3_JsPropNameTable = [
 	{Button3: 0},
 	{Debug: 0},
 	{Button4: 0},
+	{GitHub_Badge: 0},
+	{VersionInfo: 0},
 	{SETANGLETO: 0},
 	{SETHOWTO: 0},
 	{EDITSIDE: 0},
@@ -4171,6 +4176,7 @@ self.C3_JsPropNameTable = [
 	{a: 0},
 	{b: 0},
 	{c: 0},
+	{URL: 0},
 	{CanvasPan: 0},
 	{EditSignId: 0},
 	{EditSignResult: 0},
@@ -4626,7 +4632,13 @@ self.C3_ExpressionFuncs = [
 			const v4 = p._GetNode(4).GetVar();
 			const v5 = p._GetNode(5).GetVar();
 			return () => (((((((((v0.GetValue() + "\n") + v1.GetValue()) + v2.GetValue()) + "\n") + v3.GetValue()) + "\n") + v4.GetValue()) + "\n") + v5.GetValue());
-		}
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => ("Version: " + f0());
+		},
+		() => "https://github.com/wielandb/parking-studio",
+		() => "NewWindow"
 ];
 
 

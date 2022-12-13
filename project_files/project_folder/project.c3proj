@@ -206,7 +206,9 @@
 			"BackBtn",
 			"Button3",
 			"Debug",
-			"Button4"
+			"Button4",
+			"GitHub_Badge",
+			"VersionInfo"
 		],
 		"subfolders": []
 	},
@@ -376,12 +378,12 @@
 		]
 	},
 	"properties": {
-		"description": "",
-		"version": "1.1.0.0",
-		"author": "",
+		"description": "A webapp to help with tagging street parking in OSM",
+		"version": "1.1.0.1",
+		"author": "wielandb",
 		"authorEmail": "",
 		"authorWebsite": "",
-		"appId": "",
+		"appId": "de.haukauntrie.parkingstudio",
 		"pixelRounding": false,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,

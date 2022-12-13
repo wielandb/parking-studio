@@ -109,43 +109,64 @@
 					}
 				},
 				{
-					"type": "fineHTML",
+					"type": "GitHub_Badge",
 					"properties": {
-						"tag": "div",
-						"content": "<font size=\"10\" colour=\"white\"><a href=\"https://github.com/wielandb/parking-studio\">Github</a></font>",
-						"content-type": "html",
 						"initially-visible": true,
-						"id": "",
-						"class": "",
-						"allow-context-menu": false,
-						"stop-input-events": "no",
-						"origin": "top-left",
-						"set-color": true,
-						"default-color": [
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 132,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 183.6663467687393,
+						"y": 1841.2897052944181,
+						"width": 347.3326935374786,
+						"height": 132.4205894111637,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
 							1,
 							1,
 							1,
 							1
 						],
-						"set-background-color": false,
-						"default-background-color": [
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "VersionInfo",
+					"properties": {
+						"text": "Version: ???????",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 24,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
 							1,
 							1,
 							1,
-							0
+							1
 						],
-						"auto-font-size": true,
-						"allow-text-selection": false,
-						"style-attribute": ""
+						"horizontal-alignment": "left",
+						"vertical-alignment": "bottom",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
 					},
 					"uid": 88,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 18,
-						"y": 1808,
-						"width": 928,
-						"height": 83,
+						"x": 367,
+						"y": 1841,
+						"width": 707.5254591642025,
+						"height": 75,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -153,7 +174,9 @@
 							1,
 							1,
 							1
-						]
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],

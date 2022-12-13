@@ -48,6 +48,52 @@
 				}
 			],
 			"sid": 509088211803759
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 140952698993288
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "VersionInfo",
+					"sid": 727697961469551,
+					"parameters": {
+						"text": "\"Version: \" & projectversion"
+					}
+				}
+			],
+			"sid": 165066252716305
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 253807488655140,
+					"parameters": {
+						"object": "GitHub_Badge"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "open-url-in-new-window",
+					"objectClass": "Browser",
+					"sid": 187613972626106,
+					"parameters": {
+						"url": "\"https://github.com/wielandb/parking-studio\"",
+						"tag": "\"NewWindow\""
+					}
+				}
+			],
+			"sid": 758117704297498
 		}
 	],
 	"sid": 748275859671190

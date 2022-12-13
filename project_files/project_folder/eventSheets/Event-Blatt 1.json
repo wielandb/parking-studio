@@ -5465,6 +5465,32 @@
 				}
 			],
 			"sid": 762183943620318
+		},
+		{
+			"functionName": "GetTagsFromOSMWay",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "any",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "URL",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 433920477861629
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"type": "script",
+					"script": "// Replace this with the URL of the OpenStreetMap way you want to fetch\nvar wayUrl = 'https://www.openstreetmap.org/api/0.6/way/1032606042';\n\n// Make an HTTP request to fetch the XML data for the way\nfetch(wayUrl)\n  .then(function(response) {\n    if (response.ok) {\n      // Success!\n      return response.text();\n    } else {\n      // Something went wrong (404, etc.)\n    }\n  })\n  .then(function(xml) {\n    // Parse the XML response into a DOM document\n    const parser = new DOMParser();\n    const doc = parser.parseFromString(xml, 'application/xml');\n\n    // Find all the <tag> elements in the document\n    const tags = doc.querySelectorAll('tag');\n\n    // Convert the tags to a JSON object of key-value pairs\n    const json = Array.from(tags).reduce(function(obj, tag) {\n      obj[tag.getAttribute('k')] = tag.getAttribute('v');\n      return obj;\n    }, {});\n\n    // Do something with the JSON object...\n\n      runtime.setReturnValue(str(json));\n  });"
+				}
+			],
+			"sid": 322900097178183
 		}
 	],
 	"sid": 949984832043063

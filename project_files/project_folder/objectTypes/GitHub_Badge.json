@@ -1,0 +1,57 @@
+{
+	"name": "GitHub_Badge",
+	"plugin-id": "Sprite",
+	"sid": 332697761904324,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 480,
+						"height": 183,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1232892,
+						"collisionPoly": {
+							"points": [
+								0.01020408163265306,
+								0.05,
+								0.5,
+								0,
+								0.9795918367346939,
+								0.05,
+								0.9897959183673469,
+								0.5,
+								0.9795918367346939,
+								0.9,
+								0.5,
+								0.95,
+								0.01020408163265306,
+								0.9,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 466181607105185,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

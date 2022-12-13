@@ -1,7 +1,7 @@
 {
 	"name": "ParkingStudio",
 	"short_name": "ParkingStudio",
-	"description": "",
+	"description": "A webapp to help with tagging street parking in OSM",
 	"start_url": "index.html",
 	"display": "fullscreen",
 	"orientation": "portrait",
