@@ -4061,7 +4061,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.LocalStorage.Acts.SetItem,
 		C3.Plugins.TextBox.Cnds.OnTextChanged,
 		C3.Plugins.System.Exps.projectversion,
-		C3.Plugins.Browser.Acts.GoToURLWindow
+		C3.Plugins.Browser.Acts.GoToURLWindow,
+		C3.Plugins.Browser.Cnds.OnUpdateFound
 	];
 };
 self.C3_JsPropNameTable = [
@@ -4638,7 +4639,11 @@ self.C3_ExpressionFuncs = [
 			return () => ("Version: " + f0());
 		},
 		() => "https://github.com/wielandb/parking-studio",
-		() => "NewWindow"
+		() => "NewWindow",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => ((("Version: " + f0()) + "\n") + "Drücke Shift + F5 zum aktualisieren");
+		}
 ];
 
 

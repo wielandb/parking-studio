@@ -94,6 +94,27 @@
 				}
 			],
 			"sid": 758117704297498
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-update-found-sw",
+					"objectClass": "Browser",
+					"sid": 258523396990493
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "VersionInfo",
+					"sid": 613364238010919,
+					"parameters": {
+						"text": "\"Version: \" & projectversion & newline & \"Drücke Shift + F5 zum aktualisieren\""
+					}
+				}
+			],
+			"sid": 799211126096616
 		}
 	],
 	"sid": 748275859671190
