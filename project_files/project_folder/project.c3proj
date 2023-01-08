@@ -208,7 +208,9 @@
 			"Debug",
 			"Button4",
 			"GitHub_Badge",
-			"VersionInfo"
+			"VersionInfo",
+			"How_separate_Btn",
+			"StreetSide2"
 		],
 		"subfolders": []
 	},
@@ -385,7 +387,7 @@
 	},
 	"properties": {
 		"description": "A webapp to help with tagging street parking in OSM",
-		"version": "1.1.0.5",
+		"version": "1.1.0.6",
 		"author": "wielandb",
 		"authorEmail": "",
 		"authorWebsite": "",

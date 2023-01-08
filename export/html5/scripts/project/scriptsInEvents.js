@@ -3,7 +3,7 @@
 
 const scriptsInEvents = {
 
-	async ["Event-Blatt1_Event143_Act1"](runtime, localVars)
+	async ["Event-Blatt1_Event151_Act1"](runtime, localVars)
 	{
 		    var strings = localVars.inpText.split(localVars.backConnect);
 			console.log(localVars.inpText);
@@ -77,7 +77,7 @@ const scriptsInEvents = {
 		    runtime.setReturnValue(result);
 	},
 
-	async ["Event-Blatt1_Event145_Act1"](runtime, localVars)
+	async ["Event-Blatt1_Event153_Act1"](runtime, localVars)
 	{
 		// Replace this with the URL of the OpenStreetMap way you want to fetch
 		var wayUrl = 'https://www.openstreetmap.org/api/0.6/way/1032606042';

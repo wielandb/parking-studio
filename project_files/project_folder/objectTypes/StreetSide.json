@@ -1098,6 +1098,67 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 1117,
+						"height": 2979,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8398362,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								1,
+								0,
+								1,
+								0.4812017455521988,
+								1,
+								1,
+								0,
+								0.9996643168848607,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Bildpunkt 1",
+								"x": 7.662041181736795,
+								"y": 0.5
+							},
+							{
+								"name": "Bildpunkt 2",
+								"x": 7.662041181736795,
+								"y": 0.5
+							},
+							{
+								"name": "Bildpunkt 3",
+								"x": 7.662041181736795,
+								"y": 0.5
+							},
+							{
+								"name": "Bildpunkt 4",
+								"x": 7.662041181736795,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 993094784168449,
+				"name": "separate",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
 			}
 		],
 		"subfolders": []

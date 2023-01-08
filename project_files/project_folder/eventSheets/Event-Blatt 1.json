@@ -437,6 +437,21 @@
 					}
 				},
 				{
+					"id": "add-child",
+					"objectClass": "TypeDialogBg",
+					"sid": 499743485628784,
+					"parameters": {
+						"child": "How_separate_Btn",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-z-elevation": true,
+						"destroy-with-parent": false
+					}
+				},
+				{
 					"id": "request-url",
 					"objectClass": "AJAX",
 					"sid": 433191029574880,
@@ -1314,6 +1329,67 @@
 			"sid": 490026614760686
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 462376462831946,
+					"parameters": {
+						"object": "How_separate_Btn"
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "TypeDialogBg",
+					"sid": 569495804522105,
+					"behaviorType": "Tween",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "TypeDialogBg",
+					"sid": 493281980955542,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "3000",
+						"time": "1",
+						"ease": "easeoutcubic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 811163309289598,
+					"parameters": {
+						"variable": "SETHOWTO",
+						"value": "\"separate\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 143022428173565,
+					"parameters": {
+						"variable": "SETANGLETO",
+						"value": "\"separate\""
+					}
+				},
+				{
+					"callFunction": "UpdateStreetPuzzle",
+					"sid": 141787349300510
+				}
+			],
+			"sid": 214776998111235
+		},
+		{
 			"functionName": "ShowAngleDialog",
 			"functionDescription": "",
 			"functionCategory": "",
@@ -1642,6 +1718,53 @@
 				}
 			],
 			"sid": 666961567960975
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Maus",
+					"sid": 799354249283791,
+					"parameters": {
+						"object": "How_separate_Btn"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "How_separate_Btn",
+					"sid": 411067795127498,
+					"parameters": {
+						"animation": "\"hover\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 653963462358436
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 580146679072607
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "How_separate_Btn",
+					"sid": 725485297603770,
+					"parameters": {
+						"animation": "\"default\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 594910200549447
 		},
 		{
 			"eventType": "block",
@@ -2308,6 +2431,33 @@
 								}
 							],
 							"sid": 582159893189650
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 969629045829676,
+									"parameters": {
+										"first-value": "SETANGLETO",
+										"comparison": 0,
+										"second-value": "\"separate\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "StreetSide",
+									"sid": 531230464154032,
+									"parameters": {
+										"animation": "\"separate\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 562214816538259
 						}
 					]
 				},
@@ -2826,6 +2976,33 @@
 								}
 							],
 							"sid": 966875326117296
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 112096554163195,
+									"parameters": {
+										"first-value": "SETANGLETO",
+										"comparison": 0,
+										"second-value": "\"separate\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "StreetSide",
+									"sid": 114530307544400,
+									"parameters": {
+										"animation": "\"separate\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 744898893932432
 						}
 					]
 				},
@@ -3662,6 +3839,41 @@
 						{
 							"id": "is-animation-playing",
 							"objectClass": "StreetSide",
+							"sid": 582458373955713,
+							"parameters": {
+								"animation": "\"separate\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 702126214289209,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 456580670367994,
+							"parameters": {
+								"variable": "rightStr",
+								"value": "\"parking:right=separate\""
+							}
+						}
+					],
+					"sid": 261484181516910
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
 							"sid": 218525025888797,
 							"parameters": {
 								"animation": "\"on_diagonal\""
@@ -4219,6 +4431,41 @@
 						}
 					],
 					"sid": 975144136005670
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "StreetSide",
+							"sid": 650554704750896,
+							"parameters": {
+								"animation": "\"separate\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "StreetSide",
+							"sid": 719650208548669,
+							"parameters": {
+								"instance-variable": "side",
+								"comparison": 0,
+								"value": "\"left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 178282810828405,
+							"parameters": {
+								"variable": "leftStr",
+								"value": "\"parking:left=separate\""
+							}
+						}
+					],
+					"sid": 326888448796021
 				},
 				{
 					"eventType": "block",
@@ -4890,6 +5137,50 @@
 								}
 							],
 							"sid": 920193882002394
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "StreetSide",
+									"sid": 367263542030387,
+									"parameters": {
+										"animation": "\"separate\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "StreetSide",
+									"sid": 381573258336222,
+									"parameters": {
+										"instance-variable": "side",
+										"comparison": 0,
+										"value": "\"left\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 900344800074581,
+									"parameters": {
+										"variable": "leftStr",
+										"value": "\"parking:both=separate\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 804841350610755,
+									"parameters": {
+										"variable": "rightStr",
+										"value": "\"\""
+									}
+								}
+							],
+							"sid": 345901709975129
 						},
 						{
 							"eventType": "block",

@@ -899,9 +899,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 538.732142523402,
-						"y": 3599.494897863829,
-						"width": 955.464285046804,
+						"x": 331.732142523402,
+						"y": 3600,
+						"width": 420.40428542059374,
 						"height": 272.98979572765825,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1224,6 +1224,35 @@
 							1,
 							1
 						]
+					}
+				},
+				{
+					"type": "How_separate_Btn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 133,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 755.2483630144791,
+						"y": 3600.356675146994,
+						"width": 419.97855945274154,
+						"height": 272.713350293988,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],
