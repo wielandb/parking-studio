@@ -405,6 +405,14 @@
 						"variable": "ObjectType",
 						"value": "\"area\""
 					}
+				},
+				{
+					"id": "get-item",
+					"objectClass": "LokalerSpeicher",
+					"sid": 449261933245244,
+					"parameters": {
+						"key": "\"includeTrafficSignTags\""
+					}
 				}
 			],
 			"sid": 513091339527879,
@@ -531,7 +539,36 @@
 											}
 										}
 									],
-									"sid": 734426440349025
+									"sid": 734426440349025,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 821313463876524,
+													"parameters": {
+														"variable": "includeTStags",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 600328296807167,
+													"parameters": {
+														"variable": "ParkingSignTagsRight",
+														"value": "ParkingSignTagsRight & newline & \"traffic_sign=\" & Functions.NameToTrafficSignTag(EditSignResult)"
+													}
+												}
+											],
+											"sid": 307320575731042
+										}
+									]
 								}
 							]
 						},
@@ -737,6 +774,31 @@
 				}
 			],
 			"sid": 901689228417197
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LokalerSpeicher",
+					"sid": 566993521108626,
+					"parameters": {
+						"key": "\"includeTrafficSignTags\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 425630401067689,
+					"parameters": {
+						"variable": "includeTStags",
+						"value": "LokalerSpeicher.ItemValue"
+					}
+				}
+			],
+			"sid": 230035518801135
 		},
 		{
 			"eventType": "block",

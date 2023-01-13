@@ -1,5 +1,179 @@
 {
 	"name": "Event-Blatt 5",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 695552669981746
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LokalerSpeicher",
+					"sid": 278054978009739,
+					"parameters": {
+						"key": "\"includeTrafficSignTags\""
+					}
+				}
+			],
+			"sid": 416244508041780
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LokalerSpeicher",
+					"sid": 267418732700196,
+					"parameters": {
+						"key": "\"includeTrafficSignTags\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 656051407022869,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 885132709553498,
+							"parameters": {
+								"first-value": "LokalerSpeicher.ItemValue",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-checked",
+							"objectClass": "IncludeTrafficSignsBtn",
+							"sid": 201351625108963,
+							"parameters": {
+								"state": "unchecked"
+							}
+						}
+					],
+					"sid": 450179530033680
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 694667606624376,
+							"parameters": {
+								"first-value": "LokalerSpeicher.ItemValue",
+								"comparison": 0,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-checked",
+							"objectClass": "IncludeTrafficSignsBtn",
+							"sid": 225761159527309,
+							"parameters": {
+								"state": "checked"
+							}
+						}
+					],
+					"sid": 644317578295800
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "IncludeTrafficSignsBtn",
+					"sid": 533137917220700
+				}
+			],
+			"actions": [],
+			"sid": 158186690002317,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-checked",
+							"objectClass": "IncludeTrafficSignsBtn",
+							"sid": 223851961346635
+						}
+					],
+					"actions": [
+						{
+							"id": "set-item",
+							"objectClass": "LokalerSpeicher",
+							"sid": 276621109973116,
+							"parameters": {
+								"key": "\"includeTrafficSignTags\"",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 109794805394912
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-checked",
+							"objectClass": "IncludeTrafficSignsBtn",
+							"sid": 903050575653982,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-item",
+							"objectClass": "LokalerSpeicher",
+							"sid": 283271450891770,
+							"parameters": {
+								"key": "\"includeTrafficSignTags\"",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 915671196753560
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 732496312821941,
+					"parameters": {
+						"object": "BackBtn"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 446682982830426,
+					"parameters": {
+						"layout": "Choose"
+					}
+				}
+			],
+			"sid": 867435740015665
+		}
+	],
 	"sid": 114591083574130
 }

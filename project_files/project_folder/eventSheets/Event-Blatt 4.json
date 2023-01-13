@@ -115,6 +115,30 @@
 				}
 			],
 			"sid": 799211126096616
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 167572351290264,
+					"parameters": {
+						"object": "SettingsLink"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 565762250171086,
+					"parameters": {
+						"layout": "Settings"
+					}
+				}
+			],
+			"sid": 374431523496290
 		}
 	],
 	"sid": 748275859671190

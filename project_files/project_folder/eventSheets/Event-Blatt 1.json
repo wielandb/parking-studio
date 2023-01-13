@@ -132,6 +132,16 @@
 			"sid": 194172931541995
 		},
 		{
+			"eventType": "variable",
+			"name": "includeTStags",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 964568560471615
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -481,6 +491,14 @@
 						"variable": "MainTimer",
 						"value": "0"
 					}
+				},
+				{
+					"id": "get-item",
+					"objectClass": "LokalerSpeicher",
+					"sid": 192113411225330,
+					"parameters": {
+						"key": "\"includeTrafficSignTags\""
+					}
 				}
 			],
 			"sid": 994004374799519,
@@ -626,7 +644,36 @@
 											}
 										}
 									],
-									"sid": 611502061253538
+									"sid": 611502061253538,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 152540620119039,
+													"parameters": {
+														"variable": "includeTStags",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 472085307106604,
+													"parameters": {
+														"variable": "ParkingSignTagsRight",
+														"value": "ParkingSignTagsRight & newline & \"parking:right:traffic_sign=\" & Functions.NameToTrafficSignTag(EditSignResult)"
+													}
+												}
+											],
+											"sid": 397298145783980
+										}
+									]
 								}
 							]
 						},
@@ -745,13 +792,67 @@
 											}
 										}
 									],
-									"sid": 507111018816451
+									"sid": 507111018816451,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 168943014467838,
+													"parameters": {
+														"variable": "includeTStags",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 568238040876008,
+													"parameters": {
+														"variable": "ParkingSignTagsLeft",
+														"value": "ParkingSignTagsLeft & newline & \"parking:left:traffic_sign=\" & Functions.NameToTrafficSignTag(EditSignResult)"
+													}
+												}
+											],
+											"sid": 557812421751181
+										}
+									]
 								}
 							]
 						}
 					]
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LokalerSpeicher",
+					"sid": 788068203495081,
+					"parameters": {
+						"key": "\"includeTrafficSignTags\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 646618745108214,
+					"parameters": {
+						"variable": "includeTStags",
+						"value": "LokalerSpeicher.ItemValue"
+					}
+				}
+			],
+			"sid": 150030793645461
 		},
 		{
 			"eventType": "block",
@@ -5491,6 +5592,23 @@
 				},
 				{
 					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 757526868804493,
+							"parameters": {
+								"variable": "includeTStags",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 697815956523844
+				},
+				{
+					"eventType": "block",
 					"conditions": [],
 					"actions": [
 						{
@@ -5829,6 +5947,45 @@
 				}
 			],
 			"sid": 322900097178183
+		},
+		{
+			"functionName": "NameToTrafficSignTag",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "string",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "SignId",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 578227722560767
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 659946728011726,
+					"parameters": {
+						"variable": "SignId",
+						"value": "replace(SignId, \"_\", \",\")"
+					}
+				},
+				{
+					"id": "set-function-return-value",
+					"objectClass": "Functions",
+					"sid": 829813812353793,
+					"parameters": {
+						"value": "SignId"
+					}
+				}
+			],
+			"sid": 686358348705860
 		}
 	],
 	"sid": 949984832043063

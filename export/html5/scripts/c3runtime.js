@@ -4006,11 +4006,14 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Sprite.Acts.AddChild,
 		C3.Plugins.AJAX.Acts.Request,
+		C3.Plugins.LocalStorage.Acts.GetItem,
 		C3.Plugins.System.Exps.replace,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.Sprite.Acts.LoadURL,
 		C3.Plugins.System.Acts.WaitForSignal,
 		C3.Plugins.Json.Exps.Get,
+		C3.Plugins.LocalStorage.Cnds.OnItemGet,
+		C3.Plugins.LocalStorage.Exps.ItemValue,
 		C3.Plugins.AJAX.Cnds.OnComplete,
 		C3.Plugins.Json.Acts.Parse,
 		C3.Plugins.AJAX.Exps.LastData,
@@ -4037,9 +4040,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.ResetGlobals,
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.System.Acts.Wait,
-		C3.ScriptsInEvents["Event-Blatt1_Event151_Act1"],
+		C3.ScriptsInEvents["Event-Blatt1_Event155_Act1"],
 		C3.Plugins.Button.Cnds.OnClicked,
-		C3.ScriptsInEvents["Event-Blatt1_Event153_Act1"],
+		C3.ScriptsInEvents["Event-Blatt1_Event157_Act1"],
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.Touch.Cnds.OnNthTouchStart,
 		C3.Plugins.Touch.Exps.X,
@@ -4062,7 +4065,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.TextBox.Cnds.OnTextChanged,
 		C3.Plugins.System.Exps.projectversion,
 		C3.Plugins.Browser.Acts.GoToURLWindow,
-		C3.Plugins.Browser.Cnds.OnUpdateFound
+		C3.Plugins.Browser.Cnds.OnUpdateFound,
+		C3.Plugins.Button.Acts.SetChecked,
+		C3.Plugins.Button.Cnds.IsChecked
 	];
 };
 self.C3_JsPropNameTable = [
@@ -4155,6 +4160,9 @@ self.C3_JsPropNameTable = [
 	{VersionInfo: 0},
 	{How_separate_Btn: 0},
 	{StreetSide2: 0},
+	{IncludeTrafficSignsBtn: 0},
+	{ShowTrafficSignsLbl: 0},
+	{SettingsLink: 0},
 	{SETANGLETO: 0},
 	{SETHOWTO: 0},
 	{EDITSIDE: 0},
@@ -4168,6 +4176,7 @@ self.C3_JsPropNameTable = [
 	{LeftOPENINGHOURS: 0},
 	{LeftPERMIT: 0},
 	{MainTimer: 0},
+	{includeTStags: 0},
 	{rightSignStr: 0},
 	{leftSignStr: 0},
 	{leftStr: 0},
@@ -4180,6 +4189,7 @@ self.C3_JsPropNameTable = [
 	{b: 0},
 	{c: 0},
 	{URL: 0},
+	{SignId: 0},
 	{CanvasPan: 0},
 	{EditSignId: 0},
 	{EditSignResult: 0},
@@ -4326,6 +4336,7 @@ self.C3_ExpressionFuncs = [
 		() => "dd",
 		() => "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/export/txt/parking_way.json",
 		() => "line",
+		() => "includeTrafficSignTags",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const v1 = p._GetNode(1).GetVar();
@@ -4373,10 +4384,22 @@ self.C3_ExpressionFuncs = [
 			return () => f0(v1.GetValue(), "AUSWEIS", v2.GetValue());
 		},
 		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const v2 = p._GetNode(2).GetVar();
+			return () => (((v0.GetValue() + "\n") + "parking:right:traffic_sign=") + f1(v2.GetValue()));
+		},
+		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
 			const v2 = p._GetNode(2).GetVar();
 			return () => f0(n1.ExpObject(v2.GetValue()), "SEITE", "left");
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const v2 = p._GetNode(2).GetVar();
+			return () => (((v0.GetValue() + "\n") + "parking:left:traffic_sign=") + f1(v2.GetValue()));
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -4557,6 +4580,11 @@ self.C3_ExpressionFuncs = [
 			const n1 = p._GetNode(1);
 			return () => f0(n1.ExpObject(), "\n", "right", "left", "both");
 		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			return () => f0(v1.GetValue(), "_", ",");
+		},
 		() => "Camera",
 		() => 0.05,
 		p => {
@@ -4603,6 +4631,12 @@ self.C3_ExpressionFuncs = [
 		() => 548,
 		() => -913,
 		() => "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/export/txt/parking_area.json",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const v2 = p._GetNode(2).GetVar();
+			return () => (((v0.GetValue() + "\n") + "traffic_sign=") + f1(v2.GetValue()));
+		},
 		() => "parking:lane:right=diagonal\nparking:lane:right:diagonal=street_side",
 		() => "parking:lane:right=parallel\nparking:lane:right:parallel=street_side",
 		() => "parking:lane:right=perpendicular\nparking:lane:right:perpendicular=street_side",
