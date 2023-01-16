@@ -732,6 +732,171 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "SelectableAddSign",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "1024-10",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 138,
+					"instanceVariables": {
+						"NEEDSTIME": 0,
+						"NEEDSOH": 0,
+						"NEEDSPERMIT": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": -795,
+						"y": 4411,
+						"width": 397.6881449851767,
+						"height": 298.26610873888245,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SelectableAddSign",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "1024-12",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 139,
+					"instanceVariables": {
+						"NEEDSTIME": 0,
+						"NEEDSOH": 0,
+						"NEEDSPERMIT": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": -797,
+						"y": 4742,
+						"width": 397.6881449851767,
+						"height": 298.26610873888245,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SelectableAddSign",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "1024-14",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 140,
+					"instanceVariables": {
+						"NEEDSTIME": 0,
+						"NEEDSOH": 0,
+						"NEEDSPERMIT": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": -795,
+						"y": 5076,
+						"width": 397.6881449851767,
+						"height": 298.26610873888245,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SelectableAddSign",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "1022-12",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 142,
+					"instanceVariables": {
+						"NEEDSTIME": 0,
+						"NEEDSOH": 0,
+						"NEEDSPERMIT": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": -801,
+						"y": 5411,
+						"width": 397.59151157547285,
+						"height": 297.5723969447679,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SelectableAddSign",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "1024-20",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 143,
+					"instanceVariables": {
+						"NEEDSTIME": 0,
+						"NEEDSOH": 0,
+						"NEEDSPERMIT": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": -803,
+						"y": 5741,
+						"width": 397.73630208984576,
+						"height": 298.61295805339194,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 836460477100999,
@@ -1560,6 +1725,39 @@
 						"y": 3119,
 						"width": 413.5479920131491,
 						"height": 227.45139560723197,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SelectableAddSign",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "1050-32",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 144,
+					"instanceVariables": {
+						"NEEDSTIME": 0,
+						"NEEDSOH": 0,
+						"NEEDSPERMIT": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": -798,
+						"y": 6090,
+						"width": 406.7619179856796,
+						"height": 305.07143848925966,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
