@@ -213,7 +213,8 @@
 			"StreetSide2",
 			"IncludeTrafficSignsBtn",
 			"ShowTrafficSignsLbl",
-			"SettingsLink"
+			"SettingsLink",
+			"OkBtn"
 		],
 		"subfolders": []
 	},
@@ -390,7 +391,7 @@
 	},
 	"properties": {
 		"description": "A webapp to help with tagging street parking in OSM",
-		"version": "1.1.2",
+		"version": "1.1.3",
 		"author": "wielandb",
 		"authorEmail": "",
 		"authorWebsite": "",

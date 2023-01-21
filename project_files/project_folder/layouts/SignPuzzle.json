@@ -1261,7 +1261,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 453,
-						"y": 157,
+						"y": -116,
 						"width": 595,
 						"height": 62,
 						"originX": 0,
@@ -1758,6 +1758,35 @@
 						"y": 6090,
 						"width": 406.7619179856796,
 						"height": 305.07143848925966,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "OkBtn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 141,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 964,
+						"y": 1801,
+						"width": 187.3392644375439,
+						"height": 187.3392644375439,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

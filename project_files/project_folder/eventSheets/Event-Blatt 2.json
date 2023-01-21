@@ -1165,6 +1165,14 @@
 							"parameters": {
 								"visibility": "visible"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "OkBtn",
+							"sid": 360095179116768,
+							"parameters": {
+								"visibility": "visible"
+							}
 						}
 					],
 					"sid": 855619000307446
@@ -1199,6 +1207,14 @@
 							"id": "set-visible",
 							"objectClass": "Button",
 							"sid": 384494253515999,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "OkBtn",
+							"sid": 702580127561932,
 							"parameters": {
 								"visibility": "invisible"
 							}
@@ -1238,6 +1254,14 @@
 					"id": "on-clicked",
 					"objectClass": "Button",
 					"sid": 244404511771192
+				},
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 104256925837079,
+					"parameters": {
+						"object": "OkBtn"
+					}
 				}
 			],
 			"actions": [
@@ -1326,7 +1350,8 @@
 					],
 					"sid": 583072751452430
 				}
-			]
+			],
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",

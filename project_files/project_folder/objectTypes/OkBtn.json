@@ -1,0 +1,57 @@
+{
+	"name": "OkBtn",
+	"plugin-id": "Sprite",
+	"sid": 464875414202609,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 400,
+						"height": 400,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2435461,
+						"collisionPoly": {
+							"points": [
+								0.15,
+								0.15,
+								0.5,
+								0.005,
+								0.8475,
+								0.15,
+								0.99,
+								0.5,
+								0.845,
+								0.845,
+								0.5,
+								0.9875,
+								0.1525,
+								0.845,
+								0.0075,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 528871560842789,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
