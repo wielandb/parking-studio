@@ -671,7 +671,7 @@
 					"type": "SelectableAddSign",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "1050-32",
+						"initial-animation": "1010-60",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -684,10 +684,10 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": -793.5565362904441,
-						"y": 4092.082597782167,
-						"width": 406.7619179856796,
-						"height": 305.07143848925966,
+						"x": -796,
+						"y": 4077,
+						"width": 413.547992,
+						"height": 227.451396,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -751,7 +751,7 @@
 					"behaviors": {},
 					"world": {
 						"x": -795,
-						"y": 4411,
+						"y": 4688,
 						"width": 397.6881449851767,
 						"height": 298.26610873888245,
 						"originX": 0.5,
@@ -784,7 +784,7 @@
 					"behaviors": {},
 					"world": {
 						"x": -797,
-						"y": 4742,
+						"y": 5019,
 						"width": 397.6881449851767,
 						"height": 298.26610873888245,
 						"originX": 0.5,
@@ -817,7 +817,7 @@
 					"behaviors": {},
 					"world": {
 						"x": -795,
-						"y": 5076,
+						"y": 5353,
 						"width": 397.6881449851767,
 						"height": 298.26610873888245,
 						"originX": 0.5,
@@ -850,7 +850,7 @@
 					"behaviors": {},
 					"world": {
 						"x": -801,
-						"y": 5411,
+						"y": 5688,
 						"width": 397.59151157547285,
 						"height": 297.5723969447679,
 						"originX": 0.5,
@@ -883,9 +883,42 @@
 					"behaviors": {},
 					"world": {
 						"x": -803,
-						"y": 5741,
+						"y": 6018,
 						"width": 397.73630208984576,
 						"height": 298.61295805339194,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SelectableAddSign",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "1048-15",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 145,
+					"instanceVariables": {
+						"NEEDSTIME": 0,
+						"NEEDSOH": 0,
+						"NEEDSPERMIT": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": -795,
+						"y": 4367,
+						"width": 397.6881449851767,
+						"height": 298.26610873888245,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -903,6 +936,7 @@
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
 			"color": [
 				1,
 				1,
@@ -1220,8 +1254,11 @@
 						"horizontal-alignment": "left",
 						"vertical-alignment": "top",
 						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
 						"initially-visible": true,
-						"origin": "top-left"
+						"origin": "top-left",
+						"read-aloud": false
 					},
 					"uid": 46,
 					"instanceVariables": {},
@@ -1384,8 +1421,11 @@
 						"horizontal-alignment": "left",
 						"vertical-alignment": "top",
 						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
 						"initially-visible": true,
-						"origin": "top-left"
+						"origin": "top-left",
+						"read-aloud": false
 					},
 					"uid": 81,
 					"instanceVariables": {},
@@ -1488,8 +1528,11 @@
 						"horizontal-alignment": "left",
 						"vertical-alignment": "top",
 						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
 						"initially-visible": true,
-						"origin": "top-left"
+						"origin": "top-left",
+						"read-aloud": false
 					},
 					"uid": 84,
 					"instanceVariables": {},
@@ -1648,8 +1691,11 @@
 						"horizontal-alignment": "left",
 						"vertical-alignment": "top",
 						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
 						"initially-visible": true,
-						"origin": "top-left"
+						"origin": "top-left",
+						"read-aloud": false
 					},
 					"uid": 78,
 					"instanceVariables": {},
@@ -1755,7 +1801,7 @@
 					"behaviors": {},
 					"world": {
 						"x": -798,
-						"y": 6090,
+						"y": 6367,
 						"width": 406.7619179856796,
 						"height": 305.07143848925966,
 						"originX": 0.5,
@@ -1804,6 +1850,7 @@
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
 			"color": [
 				1,
 				1,

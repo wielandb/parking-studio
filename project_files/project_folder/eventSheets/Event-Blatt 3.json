@@ -177,7 +177,8 @@
 						"ease": "easeoutelastic",
 						"destroy-on-complete": "no",
 						"loop": "no",
-						"ping-pong": "no"
+						"ping-pong": "no",
+						"repeat-count": "1"
 					}
 				}
 			],
@@ -260,7 +261,9 @@
 						"transform-w": true,
 						"transform-h": true,
 						"transform-a": true,
+						"transform-o": false,
 						"transform-z-elevation": true,
+						"transform-visibility": false,
 						"destroy-with-parent": false
 					}
 				},
@@ -275,7 +278,9 @@
 						"transform-w": true,
 						"transform-h": true,
 						"transform-a": true,
+						"transform-o": false,
 						"transform-z-elevation": true,
+						"transform-visibility": false,
 						"destroy-with-parent": false
 					}
 				},
@@ -290,7 +295,9 @@
 						"transform-w": true,
 						"transform-h": true,
 						"transform-a": true,
+						"transform-o": false,
 						"transform-z-elevation": true,
+						"transform-visibility": false,
 						"destroy-with-parent": false
 					}
 				},
@@ -305,7 +312,9 @@
 						"transform-w": true,
 						"transform-h": true,
 						"transform-a": true,
+						"transform-o": false,
 						"transform-z-elevation": true,
+						"transform-visibility": false,
 						"destroy-with-parent": false
 					}
 				},
@@ -320,7 +329,9 @@
 						"transform-w": true,
 						"transform-h": true,
 						"transform-a": true,
+						"transform-o": false,
 						"transform-z-elevation": true,
+						"transform-visibility": false,
 						"destroy-with-parent": false
 					}
 				},
@@ -335,7 +346,9 @@
 						"transform-w": true,
 						"transform-h": true,
 						"transform-a": true,
+						"transform-o": false,
 						"transform-z-elevation": true,
+						"transform-visibility": false,
 						"destroy-with-parent": false
 					}
 				},
@@ -350,7 +363,9 @@
 						"transform-w": true,
 						"transform-h": true,
 						"transform-a": true,
+						"transform-o": false,
 						"transform-z-elevation": true,
+						"transform-visibility": false,
 						"destroy-with-parent": false
 					}
 				},
@@ -365,7 +380,9 @@
 						"transform-w": true,
 						"transform-h": true,
 						"transform-a": true,
+						"transform-o": false,
 						"transform-z-elevation": true,
+						"transform-visibility": false,
 						"destroy-with-parent": false
 					}
 				},
@@ -380,7 +397,9 @@
 						"transform-w": true,
 						"transform-h": true,
 						"transform-a": true,
+						"transform-o": false,
 						"transform-z-elevation": true,
+						"transform-visibility": false,
 						"destroy-with-parent": false
 					}
 				},
@@ -963,7 +982,8 @@
 					"objectClass": "Touch",
 					"sid": 842465683131256,
 					"parameters": {
-						"object": "BayTrigger"
+						"object": "BayTrigger",
+						"type": "start"
 					}
 				},
 				{
@@ -988,7 +1008,8 @@
 						"ease": "easeoutcubic",
 						"destroy-on-complete": "no",
 						"loop": "no",
-						"ping-pong": "no"
+						"ping-pong": "no",
+						"repeat-count": "1"
 					}
 				},
 				{
@@ -1015,7 +1036,8 @@
 					"objectClass": "Touch",
 					"sid": 415698084244645,
 					"parameters": {
-						"object": "markedTrigger"
+						"object": "markedTrigger",
+						"type": "start"
 					}
 				},
 				{
@@ -1040,7 +1062,8 @@
 						"ease": "easeoutcubic",
 						"destroy-on-complete": "no",
 						"loop": "no",
-						"ping-pong": "no"
+						"ping-pong": "no",
+						"repeat-count": "1"
 					}
 				},
 				{
@@ -1067,7 +1090,8 @@
 					"objectClass": "Touch",
 					"sid": 849756121840238,
 					"parameters": {
-						"object": "onStreetTrigger"
+						"object": "onStreetTrigger",
+						"type": "start"
 					}
 				},
 				{
@@ -1092,7 +1116,8 @@
 						"ease": "easeoutcubic",
 						"destroy-on-complete": "no",
 						"loop": "no",
-						"ping-pong": "no"
+						"ping-pong": "no",
+						"repeat-count": "1"
 					}
 				},
 				{
@@ -1119,7 +1144,8 @@
 					"objectClass": "Touch",
 					"sid": 939366393093902,
 					"parameters": {
-						"object": "halfTrigger"
+						"object": "halfTrigger",
+						"type": "start"
 					}
 				},
 				{
@@ -1144,7 +1170,8 @@
 						"ease": "easeoutcubic",
 						"destroy-on-complete": "no",
 						"loop": "no",
-						"ping-pong": "no"
+						"ping-pong": "no",
+						"repeat-count": "1"
 					}
 				},
 				{
@@ -1171,7 +1198,8 @@
 					"objectClass": "Touch",
 					"sid": 290860424515396,
 					"parameters": {
-						"object": "nextToTrigger"
+						"object": "nextToTrigger",
+						"type": "start"
 					}
 				},
 				{
@@ -1196,7 +1224,8 @@
 						"ease": "easeoutcubic",
 						"destroy-on-complete": "no",
 						"loop": "no",
-						"ping-pong": "no"
+						"ping-pong": "no",
+						"repeat-count": "1"
 					}
 				},
 				{
@@ -1223,7 +1252,8 @@
 					"objectClass": "Touch",
 					"sid": 206570941427970,
 					"parameters": {
-						"object": "How_No_Btn"
+						"object": "How_No_Btn",
+						"type": "start"
 					}
 				},
 				{
@@ -1248,7 +1278,8 @@
 						"ease": "easeoutcubic",
 						"destroy-on-complete": "no",
 						"loop": "no",
-						"ping-pong": "no"
+						"ping-pong": "no",
+						"repeat-count": "1"
 					}
 				},
 				{
@@ -1300,7 +1331,8 @@
 						"ease": "easeoutelastic",
 						"destroy-on-complete": "no",
 						"loop": "no",
-						"ping-pong": "no"
+						"ping-pong": "no",
+						"repeat-count": "1"
 					}
 				}
 			],
@@ -1436,7 +1468,8 @@
 						"ease": "easeoutcubic",
 						"destroy-on-complete": "no",
 						"loop": "no",
-						"ping-pong": "no"
+						"ping-pong": "no",
+						"repeat-count": "1"
 					}
 				},
 				{
@@ -1488,7 +1521,8 @@
 						"ease": "easeoutcubic",
 						"destroy-on-complete": "no",
 						"loop": "no",
-						"ping-pong": "no"
+						"ping-pong": "no",
+						"repeat-count": "1"
 					}
 				},
 				{
@@ -1540,7 +1574,8 @@
 						"ease": "easeoutcubic",
 						"destroy-on-complete": "no",
 						"loop": "no",
-						"ping-pong": "no"
+						"ping-pong": "no",
+						"repeat-count": "1"
 					}
 				},
 				{
@@ -1590,7 +1625,8 @@
 					"objectClass": "Touch",
 					"sid": 238679964671050,
 					"parameters": {
-						"object": "SignRight"
+						"object": "SignRight",
+						"type": "start"
 					}
 				}
 			],

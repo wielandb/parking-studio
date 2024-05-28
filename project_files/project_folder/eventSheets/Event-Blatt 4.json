@@ -9,7 +9,8 @@
 					"objectClass": "Touch",
 					"sid": 291434268672645,
 					"parameters": {
-						"object": "AreaSelector"
+						"object": "AreaSelector",
+						"type": "start"
 					}
 				}
 			],
@@ -33,7 +34,8 @@
 					"objectClass": "Touch",
 					"sid": 640893057866093,
 					"parameters": {
-						"object": "LineSelector"
+						"object": "LineSelector",
+						"type": "start"
 					}
 				}
 			],

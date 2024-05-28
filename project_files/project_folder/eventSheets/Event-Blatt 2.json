@@ -138,7 +138,9 @@
 								"transform-w": true,
 								"transform-h": true,
 								"transform-a": true,
+								"transform-o": false,
 								"transform-z-elevation": true,
+								"transform-visibility": false,
 								"destroy-with-parent": false
 							}
 						},
@@ -153,7 +155,9 @@
 								"transform-w": true,
 								"transform-h": true,
 								"transform-a": true,
+								"transform-o": false,
 								"transform-z-elevation": true,
+								"transform-visibility": false,
 								"destroy-with-parent": false
 							}
 						},
@@ -168,7 +172,9 @@
 								"transform-w": true,
 								"transform-h": true,
 								"transform-a": true,
+								"transform-o": false,
 								"transform-z-elevation": true,
+								"transform-visibility": false,
 								"destroy-with-parent": false
 							}
 						},
@@ -183,7 +189,9 @@
 								"transform-w": true,
 								"transform-h": true,
 								"transform-a": true,
+								"transform-o": false,
 								"transform-z-elevation": true,
+								"transform-visibility": false,
 								"destroy-with-parent": false
 							}
 						},
@@ -198,7 +206,9 @@
 								"transform-w": true,
 								"transform-h": true,
 								"transform-a": true,
+								"transform-o": false,
 								"transform-z-elevation": true,
+								"transform-visibility": false,
 								"destroy-with-parent": false
 							}
 						},
@@ -213,7 +223,9 @@
 								"transform-w": true,
 								"transform-h": true,
 								"transform-a": true,
+								"transform-o": false,
 								"transform-z-elevation": true,
+								"transform-visibility": false,
 								"destroy-with-parent": false
 							}
 						},
